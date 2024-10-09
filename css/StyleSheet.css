@@ -269,7 +269,7 @@ background-color:white;
     display: inline-block;
     left: 0;
     top: 0;
-    max-width:100%;
+    width:100%;
     
     height: 100%;
     mask-image: linear-gradient(to bottom, 
@@ -1383,24 +1383,25 @@ transform: translate(-50%,0);
     height: 100%;
     }
     .imgStartKurse {
-        position: relative;
-        display: inline-block;
-        left: 0;
-        top: 0;
-        max-width: 1000px;
-        height: 100%;
+        display: flex;
+       
+        width:auto;
+        height: 100vh;
     }
+
     #imgChakra {
         display: none;
         overflow-x: hidden;
         overflow-y: hidden;
     }
     #imgStart {
-        display: block;
-        max-width: 900px;
-        transform: translateX(-100px);
-        
+        position: relative;
+        display: flex;
+        width: auto;
+        height:100vh;
+        top: 0px;
     }
+    
     #imgYoga1 {
         position: relative;
         top: 30px;
@@ -1527,7 +1528,12 @@ transform: translate(-50%,0);
         max-width: 1000px;
         height: 100%;
     }
-
+    #imgStart {
+        
+        width: auto;
+        height:100vh;
+        top: 0px;
+    }
     .text_kurs_startscreen h1 {
         display: block;
         position: absolute;
