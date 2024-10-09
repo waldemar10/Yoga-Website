@@ -232,18 +232,20 @@ background-color:white;
 }
 #imgYoga2 {
     position: relative;
-    top:0vw;
-    width: 50vw;
+    top:-7vw;
+    width: 40vw;
     min-width: 200px;
 }
 #imgChakra {
     position:relative;
-    left:5vw;
-    width: 20vw;
+    top:-15vw;
+    left:12vw;
+    width: 25vw;
    
 }
 .imgKursStart {
     margin-top: 30px;
+   
     width: calc(100px + 23vw);
     transition-duration: 0.8s;
 }
@@ -274,6 +276,10 @@ background-color:white;
 }
 .img {
     max-width: 100%;
+}
+#img_hathayoga{
+   /*  width: 90%; */
+    transition-duration: 0.5s;
 }
 #img_hathayoga:hover{
     filter: drop-shadow( 5px 5px 2px #72c74b);
