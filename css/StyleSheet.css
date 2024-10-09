@@ -250,11 +250,16 @@ background-color:white;
 #imgStart {
     position: relative;
     display: inline-block;
-    left: 0;
-    top: 0;
-    max-width: 100%;
-    height: 100%;
+    top: -200px;
+    width: 100%;
+    
+    mask-image: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 1) 0%,    
+    rgba(0, 0, 0, 1) 70%,   
+    rgba(0, 0, 0, 0) 100%   
+);
 }
+
 .imgStartKurse {
     position: relative;
     display: inline-block;
