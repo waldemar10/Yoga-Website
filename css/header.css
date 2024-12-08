@@ -1,0 +1,196 @@
+:root{
+    --bg-header: #1e1e1e;
+}
+
+.header-wrapper {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+.header-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    var(--bg-header) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.header-dark::after {
+  opacity: 1;
+}
+.header-navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ /*  flex-direction: column; */
+  max-width: 1200px;
+    width: 100%;
+}
+
+.header-navbar-link-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px;
+  width: 100%;
+}
+.header-navbar-link {
+  font-size: 1.5rem;
+  text-shadow: 0px 0px 5px rgb(92, 92, 92);
+  padding: 10px;
+  margin: 15px;
+  border-radius: 10px;
+}
+.header-navbar-link:hover {
+  filter: brightness(0.8);
+}
+.header-navbar-link a {
+  color: white;
+}
+.header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+#Abstraktes_Logo {
+  margin: 10px;
+  fill: #ffffff;
+  transition-duration: 0.5s;
+  filter: drop-shadow(0 0px 4px rgba(0, 0, 0, 0.6));
+}
+
+#Abstraktes_Logo:hover path:nth-child(1) {
+  animation: rotate_right 0.5s forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+/*Teil unten*/
+#Abstraktes_Logo:hover path:nth-child(2) {
+  /*animation:rotate_bottom 1s forwards;*/
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#Abstraktes_Logo:hover path:nth-child(3) {
+  animation: rotate_left 0.5s forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#Abstraktes_Logo:hover circle {
+  animation: rotate_kreis 0.5s forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#Abstraktes_Logo path:nth-child(1) {
+  animation: rotate_right_out 0.5s forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#Abstraktes_Logo path:nth-child(2) {
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#Abstraktes_Logo path:nth-child(3) {
+  animation: rotate_left_out 0.5s forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#Abstraktes_Logo circle {
+  animation: rotate_kreis_out 0.5s forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+.header-burger-menu {
+  display: none;
+}
+/* .header-navbar-link-container-responsive {
+  display: none;
+} */
+.header-navbar-link-container-burger-menu {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+    .header-navbar-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        background-color: var(--bg-header);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      }
+      .header-navbar-link-container {
+        display: none;
+      }
+  .header-burger-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px; 
+    background: none;
+    margin: 10px;
+    padding: 2px;
+  }
+  .header-burger-menu .burger-menu-icon {
+    fill: white;
+    display: none;
+    transition: opacity 3s ease;
+}
+
+.header-burger-menu .close-icon {
+    display: none;
+    transition: opacity 3s ease;
+}
+
+.header-burger-menu[data-state="closed"] .burger-menu-icon {
+    display: inline;
+    opacity: 1;
+}
+
+.header-burger-menu[data-state="open"] .close-icon {
+    display: inline;
+    opacity: 1;
+}
+  .close-icon g path{
+    stroke: white;
+  }
+  .header-navbar-link-container-burger-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--bg-header);
+
+  }
+
+  .header-navbar-link-container-burger-menu a {
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-bottom: 1px solid white;
+  }
+  .burger-menu-fade-out {
+    animation: fadeOutBurgerMenu 0.5s;
+  }
+  .burger-menu-fade-in {
+    animation: fadeInBurgerMenu 0.5s;
+  }
+}

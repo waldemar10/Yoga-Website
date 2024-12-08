@@ -1,13 +1,15 @@
 <?php include "components/head.php"; ?>
 
 <body class="body-bg-darkmode">
-<div>
-    <img id="imgStart" src="images/yogaStartscreen.jpg" />
-    </div>
-    <!-- <div class="layout"> -->
 
+
+    <img id="imgStart" src="images/yogaStartscreen.jpg" />
+   
+    <div class="layout">
 
     <?php include 'components/header.php'; ?>
+
+    
     
     <div class="flex absolute start_text">
         <div class="divAbstandL"></div>
@@ -117,7 +119,7 @@
     </p>
 
     <?php include 'components/footer.php'; ?>
-    <!-- </div> -->
+    </div>
 </body>
 
 </html>

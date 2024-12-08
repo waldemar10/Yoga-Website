@@ -1,10 +1,29 @@
 // JavaScript source code
-function myFunction() {
-  var x = document.getElementById("social_links");
-  if (x.style.display === "block") {
-    x.style.display = "none";
+function handleBurgerMenu() {
+  const button = document.querySelector(".header-burger-menu");
+  const burgerMenuLinks = document.querySelector(".header-navbar-link-container-burger-menu");
+  if (!burgerMenuLinks || !button) {
+      return console.error("Elemente nicht gefunden");
+  }
+
+  const isOpen = button.getAttribute("data-state") === "open";
+
+  if (isOpen) {
+      // Schließe das Menü
+      burgerMenuLinks.classList.remove("burger-menu-fade-in");
+      burgerMenuLinks.classList.add("burger-menu-fade-out");
+      burgerMenuLinks.addEventListener("animationend", function handleAnimationEnd() {
+          burgerMenuLinks.style.display = "none";
+          button.setAttribute("data-state", "closed");
+          burgerMenuLinks.classList.remove("burger-menu-fade-out");
+          burgerMenuLinks.removeEventListener("animationend", handleAnimationEnd);
+      });
   } else {
-    x.style.display = "block";
+      // Öffne das Menü
+      burgerMenuLinks.style.display = "flex";
+      burgerMenuLinks.classList.remove("burger-menu-fade-out");
+      burgerMenuLinks.classList.add("burger-menu-fade-in");
+      button.setAttribute("data-state", "open");
   }
 }
 
@@ -481,6 +500,21 @@ function anmelden_abbrechen() {
   window.location.reload();
   check_anmeldung = false;
 }
+document.addEventListener("DOMContentLoaded", function () {
+const headerWrapper = document.querySelector("#header-wrapper");
+if (!headerWrapper) {
+  console.error("header-wrapper nicht gefunden");
+  return;
+}
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 0) {
+    headerWrapper.classList.add("header-dark");
+  } else {
+    headerWrapper.classList.remove("header-dark");
+  }
+});
+});
+
 //Startseite: Button-Funktion für Hatha-Yoga
 function showButtonLeft() {
  /*  document.getElementById("flex_startscreen1").style.flexDirection = "column";

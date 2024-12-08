@@ -67,7 +67,10 @@ a:active {
   color: #c4c4c4;
 }
 .layout{
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 @media  screen and (max-width: 1200px) {
   .layout{
@@ -265,7 +268,8 @@ a:active {
   display: inline-block;
   top: -200px;
   width: 100%;
-
+  z-index: -1;
+  filter:brightness(0.9);
   mask-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 1) 0%,
@@ -513,26 +517,7 @@ a:active {
 }
 /***************************************************/
 /*Navigation bzw. Navbar*/
-.navbar {
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  width: 150vw;
-  position: relative;
-  top: 10px;
-  text-align: center;
-}
 
-.navbarLogo {
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  justify-content: center;
-  text-align: center;
-  top: 0px;
-}
 .nav_pos {
   position: absolute;
   width: calc(150px + 3.2vw);
@@ -541,13 +526,7 @@ a:active {
   height: 0px;
   text-align: center;
 }
-.linkNav {
-  text-align: center;
-  text-shadow: 1px 1px 1px black;
-  font-size: calc(12px + 0.8vw);
-  height: 20px;
-  width: calc(50px + 6.5vw);
-}
+
 .responive_nav {
   display: none;
 }
@@ -998,121 +977,8 @@ a:active {
 /***************************************************/
 /*Logo Animation*/
 
-#Abstraktes_Logo {
-  fill: #29b6f6;
-  margin-top: 10px;
-  transition-duration: 1s;
-  filter: drop-shadow(0px 0.2vw 0.2vw rgba(0, 0, 0, 0.6));
-}
 
-#Abstraktes_Logo:hover path:nth-child(1) {
-  animation: rotate_right 1s forwards;
-  transform-origin: center;
-  transform-box: fill-box;
-}
-/*Teil unten*/
-#Abstraktes_Logo:hover path:nth-child(2) {
-  /*animation:rotate_bottom 1s forwards;*/
-  transform-origin: center;
-  transform-box: fill-box;
-}
-#Abstraktes_Logo:hover path:nth-child(3) {
-  animation: rotate_left 1s forwards;
-  transform-origin: center;
-  transform-box: fill-box;
-}
-#Abstraktes_Logo:hover circle {
-  animation: rotate_kreis 1s forwards;
-  transform-origin: center;
-  transform-box: fill-box;
-}
 
-@keyframes rotate_right {
-  0% {
-    transform: rotate(0deg) translateY(-20px) translateX(-25px);
-  }
-  100% {
-    transform: rotate(-10deg) translateY(-20px) translateX(-40px);
-  }
-}
-@keyframes rotate_bottom {
-  0% {
-    transform: rotate(0deg) translateY(-20px) translateX(-20px);
-  }
-  100% {
-    transform: rotate(-70deg) translateY(10px) translateX(50px);
-  }
-}
-@keyframes rotate_left {
-  0% {
-    transform: rotate(0deg) translateY(-15px) translateX(-30px);
-  }
-  100% {
-    transform: rotate(-3deg) translateY(0px) translateX(-30px);
-  }
-}
-@keyframes rotate_kreis {
-  0% {
-    transform: rotate(0deg) translateY(0px) translateX(0px);
-  }
-  100% {
-    transform: translateY(0px) translateX(-10px);
-  }
-}
-
-#Abstraktes_Logo path:nth-child(1) {
-  animation: rotate_right_out 1s forwards;
-  transform-origin: center;
-  transform-box: fill-box;
-}
-
-#Abstraktes_Logo path:nth-child(2) {
-  transform-origin: center;
-  transform-box: fill-box;
-}
-#Abstraktes_Logo path:nth-child(3) {
-  animation: rotate_left_out 1s forwards;
-  transform-origin: center;
-  transform-box: fill-box;
-}
-#Abstraktes_Logo circle {
-  animation: rotate_kreis_out 1s forwards;
-  transform-origin: center;
-  transform-box: fill-box;
-}
-@keyframes rotate_right_out {
-  0% {
-    transform: rotate(-10deg) translateY(-20px) translateX(-40px);
-  }
-  100% {
-    transform: rotate(0deg) translateY(-20px) translateX(-25px);
-  }
-}
-@keyframes rotate_bottom_out {
-  0% {
-    transform: rotate(-70deg) translateY(10px) translateX(50px);
-  }
-  100% {
-    transform: rotate(0deg) translateY(-20px) translateX(-20px);
-  }
-}
-@keyframes rotate_left_out {
-  0% {
-    transform: rotate(-3deg) translateY(0px) translateX(-30px);
-  }
-  100% {
-    transform: rotate(0deg) translateY(-15px) translateX(-30px);
-  }
-}
-@keyframes rotate_kreis_out {
-  0% {
-    transform: translateY(0px) translateX(-10px);
-  }
-
-  100% {
-    transform: rotate(0deg) translateY(0px) translateX(0px);
-  }
-}
 /***************************************************/
 
 /*Smartphone*/
@@ -1173,51 +1039,7 @@ a:active {
     text-align: left;
     margin-top: 0px;
   }
-  .navbar {
-    display: none;
-    position: relative;
-    top: 0;
-    left: 0px;
-    text-align: center;
-    height: 0;
-    width: 300px;
-  }
-  .navbarLogo {
-    display: none;
-    position: relative;
-    left: 0px;
-    top: 0px;
-    height: auto;
-    width: 0;
-    text-align: center;
-  }
-  .responive_nav {
-    display: block;
-    overflow: hidden;
-    color: white;
-    position: absolute;
-    border-radius: 10px;
-    top: 10px;
-    right: 10px;
-    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.7));
-  }
 
-  .responive_nav #social_links {
-    display: none;
-  }
-
-  .responive_nav a {
-    color: white;
-    padding: 10px 10px;
-    text-decoration: none;
-    font-size: 20px;
-    display: block;
-  }
-
-  .responive_nav a:hover {
-    background-color: #ddd;
-    color: #181818;
-  }
   .linkNav2 {
     display: block;
     position: relative;
@@ -1373,16 +1195,7 @@ a:active {
     -ms-transform: translate(-50%, 0%);
     transform: translate(-50%, 0%);
   }
-  .icon_burger_menu {
-    display: block;
-    background: white;
-    position: relative;
-    padding: 10px 10px;
-    text-decoration: none;
-    width: 100%;
-    height: 50px;
-    transition-duration: 0.5s;
-  }
+
 
   .responsive {
     display: block;
