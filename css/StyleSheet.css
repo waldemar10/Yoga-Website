@@ -75,11 +75,34 @@ a:active {
 @media  screen and (max-width: 1200px) {
   .layout{
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0;
   }
     
+}
+.highlight-image{
+  position: relative;
+  width: 100%;
+  z-index: -1;
+  filter:brightness(0.9);
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.highlight-image-responsive{
+  
+  display: none;
+  filter:brightness(0.9);
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 .absolute {
   position: absolute;
@@ -1223,6 +1246,16 @@ a:active {
 }
 /*Tablet*/
 @media only screen and (max-width: 1000px) and (min-width: 600px) {
+  .highlight-image{
+    display: none;
+  }
+  .highlight-image-responsive{
+    display: inline;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin-top: 150px;
+  }
   * {
     font-size: 16px;
   }
@@ -1254,9 +1287,10 @@ a:active {
     height: 100%;
   }
   #imgStart {
-    width: auto;
+    position: relative;
+   /*  width: auto;
     height: 100vh;
-    top: 0px;
+    top: 0px; */
   }
   .text_kurs_startscreen h1 {
     display: block;

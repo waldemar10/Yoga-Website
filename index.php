@@ -3,39 +3,39 @@
 <body class="body-bg-darkmode">
 
 
-    <img id="imgStart" src="images/yogaStartscreen.jpg" />
+    <img class="highlight-image" src="images/yogaStartscreen.jpg" />
    
     <div class="layout">
 
     <?php include 'components/header.php'; ?>
 
+    <img class="highlight-image-responsive" src="images/yogaStartscreen.jpg" />
     
-    
-    <div class="flex absolute start_text">
-        <div class="divAbstandL"></div>
+    <!-- <div class="flex absolute start_text">
+      
         <h1 class="text_startscreen_first text-align-right">
             Erlebe Yoga<br />
 
         </h1>
-        <div class="divAbstandR"></div>
-    </div>
-    <div class="flex absolute start_text">
-        <div class="divAbstandL"></div>
+    
+    </div> -->
+   <!--  <div class="flex absolute start_text">
+       
         <div class="flex-1-1-0">
             <button type="button" onclick="location.href='zuhause.html';" class="margin-top_buttonStart buttonStart display_smartphone_none">
                 Entdecken
             </button>
         </div>
-        <div class="divAbstandR"></div>
-    </div>
+     
+    </div> -->
     <div class="flex absolute start_text responsive">
-        <div class="divAbstandL"></div>
+      
         <div class="flex centerContent">
             <button type="button" onclick="location.href='zuhause.html';" class="margin-top buttonStart responsive">
                 Entdecken
             </button>
         </div>
-        <div class="divAbstandR"></div>
+  
     </div>
 
     <div class="flex relative">

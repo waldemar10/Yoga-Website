@@ -1,7 +1,9 @@
 // JavaScript source code
 function handleBurgerMenu() {
+
   const button = document.querySelector(".header-burger-menu");
   const burgerMenuLinks = document.querySelector(".header-navbar-link-container-burger-menu");
+
   if (!burgerMenuLinks || !button) {
       return console.error("Elemente nicht gefunden");
   }
@@ -9,18 +11,20 @@ function handleBurgerMenu() {
   const isOpen = button.getAttribute("data-state") === "open";
 
   if (isOpen) {
-      // Schließe das Menü
+      
       burgerMenuLinks.classList.remove("burger-menu-fade-in");
       burgerMenuLinks.classList.add("burger-menu-fade-out");
+      button.setAttribute("data-state", "closed");
       burgerMenuLinks.addEventListener("animationend", function handleAnimationEnd() {
           burgerMenuLinks.style.display = "none";
-          button.setAttribute("data-state", "closed");
+          
           burgerMenuLinks.classList.remove("burger-menu-fade-out");
           burgerMenuLinks.removeEventListener("animationend", handleAnimationEnd);
       });
   } else {
-      // Öffne das Menü
+ 
       burgerMenuLinks.style.display = "flex";
+    
       burgerMenuLinks.classList.remove("burger-menu-fade-out");
       burgerMenuLinks.classList.add("burger-menu-fade-in");
       button.setAttribute("data-state", "open");
