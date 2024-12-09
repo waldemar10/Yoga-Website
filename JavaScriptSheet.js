@@ -30,8 +30,26 @@ function handleBurgerMenu() {
       button.setAttribute("data-state", "open");
   }
 }
+function setMarginTopForHighlightImage() {
+  const wrapper = document.querySelector(".header-wrapper").getBoundingClientRect();
+  const highlightImageMarginTop = document.querySelector(".highlight-image");
+  if(!highlightImageMarginTop) return;
+  if(window.innerWidth > 1000){
+    highlightImageMarginTop.style.marginTop = "0px";
+    return;
+  }
+  highlightImageMarginTop.style.marginTop = wrapper.height + "px";
+}
+
+window.onresize = function () {
+  /* setMarginTopForHighlightImage(); */
+
+};
 
 window.onload = function () {
+
+  /* setMarginTopForHighlightImage(); */
+  
   var hatha_angemeldet = localStorage.getItem("check_hatha");
   var yinyang_angemeldet = localStorage.getItem("check_yinyang");
   var vinyasa_angemeldet = localStorage.getItem("check_vinyasayoga");

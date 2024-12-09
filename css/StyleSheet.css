@@ -1,4 +1,7 @@
-﻿* {
+﻿:root{
+  --primary-color:#fa9e1d;
+}
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -81,11 +84,22 @@ a:active {
   }
     
 }
-.highlight-image{
-  position: relative;
+.highlight-container {
+  position: relative; 
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   width: 100%;
-  z-index: -1;
-  filter:brightness(0.9);
+  height: 100vh; 
+  overflow: hidden; 
+}
+.highlight-image{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: -1; 
+  filter: brightness(0.8); 
   mask-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 1) 0%,
@@ -93,10 +107,38 @@ a:active {
     rgba(0, 0, 0, 0) 100%
   );
 }
+.startscreen-text-box{
+  position: relative; 
+  z-index: 1; 
+  color: white; 
+  grid-row: 3;
+  grid-column: 2;
+  padding: 20px;
+  text-align: center;
+}
+.startscreen-text-box h1{
+  font-size: 4rem;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+.startscreen-text-button{
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--primary-color); 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+}
+.startscreen-text-button:hover{
+  box-shadow: 0px 0px 5px white;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
 .highlight-image-responsive{
-  
   display: none;
-  filter:brightness(0.9);
+  filter:brightness(0.8);
   mask-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 1) 0%,
@@ -281,30 +323,18 @@ a:active {
   width: 25vw;
 }
 .imgKursStart {
-  margin-top: 30px;
+  width: 100%;
+ /*  margin-top: 30px;
 
   width: calc(100px + 23vw);
-  transition-duration: 0.8s;
+  transition-duration: 0.8s; */
 }
-#imgStart {
-  position: relative;
-  display: inline-block;
-  top: -200px;
-  width: 100%;
-  z-index: -1;
-  filter:brightness(0.9);
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 70%,
-    rgba(0, 0, 0, 0) 100%
-  );
-}
+
 .img_about {
   width: 50%;
 }
 .imgStartKurse {
-  position: relative;
+  /* position: relative;
   display: inline-block;
   left: 0;
   top: 0;
@@ -316,7 +346,7 @@ a:active {
     rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 1) 70%,
     rgba(0, 0, 0, 0) 100%
-  );
+  ); */
 }
 .img_spiegeln {
   transform: scaleX(-1);
@@ -556,9 +586,9 @@ a:active {
 /***************************************************/
 
 /*Text, Font und Textabstand*/
-.start_text {
+/* .start_text {
   top: calc(150px + 9.7vw);
-}
+} */
 .start_text_kurs {
   top: calc(150px + 9.7vw);
 }
@@ -613,13 +643,14 @@ a:active {
 .h3_kurse {
   font-size: 30px;
 }
+
 .text_startscreen_first {
-  flex: 1 1 10px;
-  width: 100%;
+  /* flex: 1 1 10px;
+  width: 100%; */
   color: white;
   font-family: "Arial Rounded MT";
-  font-size: 3.3vw;
-  filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.7));
+  font-size: 2rem;
+  /* filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.7)); */
 }
 .font-size30 {
   font-size: 30px;
@@ -1006,6 +1037,12 @@ a:active {
 
 /*Smartphone*/
 @media only screen and (max-width: 600px) {
+  .startscreen-text-box h1{
+    font-size: 2rem;
+  }
+  .startscreen-text-button{
+    padding: 10px;
+  }
   .display_smartphone_none {
     display: none;
   }
@@ -1097,23 +1134,23 @@ a:active {
     position: absolute;
     color: white;
     text-align: center;
-    font-family: "Arial Rounded MT";
+    /* font-family: "Arial Rounded MT";
     font-size: calc(40px + 0.39vw);
     top: 150px;
     width: 400px;
     left: 50%;
     -ms-transform: translate(-50%, 0%);
     transform: translate(-50%, 0%);
-    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.7));
+    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.7)); */
   }
 
   .h2_yoga_start {
     display: none;
   }
-  .start_text {
+  /* .start_text {
     z-index: 999;
     top: calc(70px + 9.7vw);
-  }
+  } */
   .start_text_kurs {
     top: 235px;
   }
@@ -1137,18 +1174,18 @@ a:active {
   /***************************************************/
   /*Bilder*/
   .imgStartKurse_zuhause {
-    position: relative;
+    /* position: relative;
     display: inline-block;
     left: 0;
     top: 0;
     max-width: 100%;
-    height: 100%;
+    height: 100%; */
   }
   .imgStartKurse {
-    display: flex;
+    /* display: flex;
 
     width: auto;
-    height: 100vh;
+    height: 100vh; */
   }
 
   #imgChakra {
@@ -1156,14 +1193,7 @@ a:active {
     overflow-x: hidden;
     overflow-y: hidden;
   }
-  #imgStart {
-    position: relative;
-    display: flex;
-    width: auto;
-    height: 100vh;
-    top: 0px;
-  }
-
+  
   #imgYoga1 {
     position: relative;
     top: 30px;
@@ -1179,9 +1209,9 @@ a:active {
     min-width: 200px;
   }
   .imgKursStart_responsive {
-    margin-top: 30px;
+    /* margin-top: 30px;
     width: 100%;
-    transition-duration: 0.8s;
+    transition-duration: 0.8s; */
   }
   .responsive_kurse_img {
     display: flex;
@@ -1245,16 +1275,15 @@ a:active {
   }
 }
 /*Tablet*/
-@media only screen and (max-width: 1000px) and (min-width: 600px) {
-  .highlight-image{
+@media only screen and (max-width: 1000px) {
+  /* .highlight-image{
     display: none;
-  }
+  } */
   .highlight-image-responsive{
     display: inline;
     position: relative;
     width: 100%;
     padding: 0;
-    margin-top: 150px;
   }
   * {
     font-size: 16px;
@@ -1278,20 +1307,15 @@ a:active {
   }
 
   .imgStartKurse {
-    position: relative;
+ /*    position: relative;
     display: inline-block;
     transform: scaleX(-1);
     left: 0;
     top: 0;
     max-width: 1000px;
-    height: 100%;
+    height: 100%; */
   }
-  #imgStart {
-    position: relative;
-   /*  width: auto;
-    height: 100vh;
-    top: 0px; */
-  }
+  
   .text_kurs_startscreen h1 {
     display: block;
     position: absolute;
@@ -1317,9 +1341,9 @@ a:active {
     padding: 0 30px 0 30px;
   }
   .imgKursStart {
-    margin-top: 30px;
+    /* margin-top: 30px;
     width: calc(500px + 23vw);
-    transition-duration: 0.8s;
+    transition-duration: 0.8s; */
   }
   #imgYoga1 {
     position: relative;
