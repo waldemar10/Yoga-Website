@@ -1,0 +1,6 @@
+.headline{
+    @include headline(48px, $darkColor);
+    margin: 20px;
+    padding: 0;
+    text-align: center;
+}

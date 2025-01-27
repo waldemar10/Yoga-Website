@@ -1,0 +1,70 @@
+.course-schedule-headline{
+    font-size: 44px;
+    color: $primaryColor;
+}
+.course-schedule-grid{
+    --gap: 2em;
+    --line-thickness: 2px;
+    --line-offset: calc(var(--gap) / 2);
+
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    color: $darkColor;
+    margin: 50px;
+    gap:var(--gap);
+    overflow: hidden;
+}
+.course-schedule-grid > .course-schedule-box{
+    position:relative;
+}
+.course-schedule-grid > .course-schedule-box::before,
+.course-schedule-grid > .course-schedule-box::after{
+    content: "";
+    position: absolute;
+    background-color: $darkColor;
+}
+// Rows
+.course-schedule-grid > .course-schedule-box::after{
+    top: calc(var(--line-offset) * -1);
+    left: 0;
+    width: 100vw;
+    height: 2px;
+}
+
+// Columns
+.course-schedule-grid > .course-schedule-box::before{
+    top: 0;
+    left: calc(var(--line-offset) * -1);
+    width: 2px;
+    height: 100vh;
+}
+.course-schedule-box{
+    h3{
+        margin: 5px;
+    }
+}
+.course-schedule-time-box{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    margin:5px;
+    
+    span:nth-child(1){
+        font-weight: bold;
+    }
+    span:nth-child(2){
+        text-align: start;
+    }
+    span:nth-child(3){
+        text-align: right;
+    }
+}
+@media screen and (max-width: 400px){
+    .course-schedule-grid{
+        margin: 50px 10px 50px 10px;
+        font-size: small;
+    }
+ 
+    
+}

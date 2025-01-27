@@ -1,109 +1,74 @@
-<?php include "components/head.php"; ?>
+<?php
 
-<body class="body-bg-darkmode">
+require __DIR__ .  DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
+/* require __DIR__ . '/../vendor/autoload.php'; */
+ini_set('session.use_only_cookies', 1);
+ini_set('session.use_strict_mode', 1);
 
+use Dotenv\Dotenv;
+$dotenv = Dotenv::createImmutable(__DIR__ . '/');
+$dotenv->load();
 
-    <!-- <img style="margin-top:-200px ;" class="highlight-image" src="images/yogaStartscreen.jpg" /> -->
-    <div class="highlight-container">
-        <img class="highlight-image" src="images/yogaStartscreen.jpg" alt="Yoga Startscreen" />
-        <div class="startscreen-text-box">
-            <h1>Finde deine innere Balance.</h1>
-            <div>
-                <button
-                    type="button"
-                    class="startscreen-text-button"
-                    onclick="location.href='atHome.php';">
-                    Jetzt entdecken
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="layout">
+$smtpHost = $_ENV['SMTP_HOST'];
+$smtpPort = $_ENV['SMTP_PORT'];
+$smtpUser = $_ENV['SMTP_USER'];
+$smtpPass = $_ENV['SMTP_PASS'];
 
-        <?php include 'components/header.php'; ?>
+$requestUri = $_SERVER['REQUEST_URI'];
 
-        <div class="flex relative">
-            <h2 class="h2_yoga_start" style="top:0vw;left:7.8vw;"> Yoga</h2>
-            <p class="text_yoga_start" style="top:8vw;left:13vw;">stärkt den Geist</p>
-            <p class="text_yoga_start" style="top:14vw;left:19.5vw;">reduziert Stress</p>
-            <p class="text_yoga_start" style="top:20vw;left:26vw;">dehnt die Muskulatur</p>
-            <p class="text_yoga_start" style="top:26vw;left:32.5vw;">verbessert dein<br />Selbstbewusstsein</p>
-            <p class="text_yoga_start" style="top:34vw;left:39vw;">und es löst </p>
-            <p class="text_yoga_start" style="top:40vw;left:45.5vw;">deine Blockaden</p>
-            <p class="text_yoga_start" style="top:46vw;left:47.5vw;">und entfaltet</p>
-            <p class="text_yoga_start" style="top:52vw;left:47.5vw;">dein wahres</p>
-            <p class="text_yoga_start" style="top:58vw;left:44.2vw;">Potenzial</p>
-            <!--Responsive Text-->
-            <h2 class="h2_yoga_start_responsive">Yoga </h2>
-            <p class="text_yoga_start_responsive" style="top:12vw;">stärkt den Geist</p>
-            <p class="text_yoga_start_responsive" style="top:18vw">reduziert Stress</p>
-            <p class="text_yoga_start_responsive" style="top:24vw">dehnt die Muskulatur</p>
-            <p class="text_yoga_start_responsive" style="top:30vw">verbessert dein<br />Selbstbewusstsein</p>
-            <p class="text_yoga_start_responsive" style="top:42vw;left:60vw;">und es löst </p>
-            <p class="text_yoga_start_responsive" style="top:48vw;left:65vw;">deine Blockaden</p>
-            <p class="text_yoga_start_responsive" style="top:54vw;left:68vw;">und entfaltet</p>
-            <p class="text_yoga_start_responsive" style="top:60vw;left:71vw;">dein wahres</p>
-            <p class="text_yoga_start_responsive" style="top:66vw;left:71vw;">Potenzial</p>
-        </div>
-        <img id="imgYoga1" src="images/yogaStart1.png" />
+$urlPath = parse_url($requestUri, PHP_URL_PATH);
 
-        <img id="imgYoga2" src="images/yogaStart2.png" />
-        <img id="imgChakra" src="images/chakras.svg" />
-        <!--Text über den 3 Cards-->
-        <h2>
-            Probier es mit einem unserer Kurse selber aus.
-        </h2>
+$routes = [
+    '/' => ['controller' => 'HomeController', 'action' => 'index'],
+    '/aboutUs' => ['controller' => 'AboutUsController', 'action' => 'index'],
+    '/contact' => ['controller' => 'ContactController', 'action' => 'index'],
+    '/contact/submit' => ['controller' => 'ContactController', 'action' => 'handleForm'],
+    '/category' => ['controller' => 'CategoryController', 'action' => 'index'],
+    '/course/{course}' => ['controller' => 'CourseController', 'action' => 'show'],
+    '/courseSchedule' => ['controller' => 'CourseScheduleController', 'action' => 'index'],
+];
 
-        <div class="yoga-showcase-container">
-            <div class="yoga-showcase-box">
-                <img id="img_hathayoga" class="imgKursStart" onclick="location.href='hathaYoga.php';"
-                    src="images/hathaYoga.png" />
-                <button class="btn-yoga-showcase bg-hathaYoga" onclick="location.href='hathaYoga.php';"
-                    type="button">Hatha Yoga</button>
-            </div>
-            <div class="yoga-showcase-box">
-                <img id="img_vinyasayoga" class="imgKursStart" onclick="location.href='vinyasaYoga.php';"
-                    src="images/vinyasaYoga.png" />
-                <button class="btn-yoga-showcase bg-vinyasaYoga" onclick="location.href='vinyasaYoga.php';"
-                    type="button">Vinyasa Yoga</button>
-            </div>
-            <div class="yoga-showcase-box">
-                <img id="img_gutenmorgenyoga" class="imgKursStart" onclick="location.href='goodMorningYoga.php';"
-                    src="images/gutenMorgenYoga.png" />
-                <button class="btn-yoga-showcase bg-goodMorningYoga" onclick="location.href='goodMorningYoga.php';"
-                    type="button">Guten Morgen Yoga</button>
-            </div>
-        </div>
+function matchRoute($urlPath, $routes)
+{
+    foreach ($routes as $route => $handler) {
+        $pattern = preg_replace('/\{[a-zA-Z]+\}/', '([^/]+)', $route);
+        $pattern = '@^' . $pattern . '$@';
 
-        <!--Flex Content responsive-->
-        <!-- <div class="flex_Normal_responsive">
-        <img class="imgKursStart_responsive" src="images/hathaYoga.png" />
+        if (preg_match($pattern, $urlPath, $matches)) {
+            array_shift($matches);
+            return ['handler' => $handler, 'params' => $matches];
+        }
+    }
+    return null;
+}
 
-    </div>
-    <div class="flex_Normal_responsive">
-        <button onclick="location.href='hathayoga.html';" class="bkursStart_responsive" type="button">Hatha Yoga</button>
-    </div>
-    <div class="flex_Normal_responsive">
-        <img class="imgKursStart_responsive" src="images/vinyasaYoga.png" />
+$matchedRoute = matchRoute($urlPath, $routes);
 
-    </div>
-    <div class="flex_Normal_responsive">
-        <button onclick="location.href='vinyasayoga.html';" class="bkursStart_responsive" type="button">Vinyasa Yoga</button>
-    </div>
-    <div class="flex_Normal_responsive">
-        <img class="imgKursStart_responsive" src="images/gutenMorgenYoga.png" />
+if ($matchedRoute) {
+    $handler = $matchedRoute['handler'];
+    $params = $matchedRoute['params'];
 
-    </div>
-    <div class="flex_Normal_responsive">
-        <button onclick="location.href='gutenmorgenyoga.html';" class="bkursStart_responsive" type="button">Guten Morgen Yoga</button>
-    </div> -->
-        <!--Text unter den 3 Cards-->
-        <p class="aKurse" style="text-align:center;margin-top:20px;">
-            Und noch mehr <a href="kategorie.html" class="color_light"><u>hier</u></a> zu finden.
-        </p>
+    dispatch($handler['controller'], $handler['action'], $params);
+} else {
+    echo $urlPath;
+    http_response_code(404);
+    echo "404 - Seite nicht gefunden.";
+}
 
-        <?php include 'components/footer.php'; ?>
-    </div>
-</body>
+function dispatch($controllerName, $actionName, $params = [])
+{
+    $controllerClass = 'App\\controllers\\' . $controllerName;
 
-</html>
+    if (class_exists($controllerClass)) {
+        $controller = new $controllerClass();
+        if (method_exists($controller, $actionName)) {
+            call_user_func_array([$controller, $actionName], $params); // Parameter übergeben
+        } else {
+            http_response_code(404);
+            die("Aktion '$actionName' nicht gefunden.");
+        }
+    } else {
+        http_response_code(404);
+        die("Controller '$controllerName' nicht gefunden.");
+    }
+}

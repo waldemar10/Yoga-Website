@@ -1,0 +1,21 @@
+@import 'variables';
+@import 'mixins';
+@import 'animations';
+
+@import 'base';
+
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'pages/home';
+@import 'pages/courseSchedule';
+@import 'pages/contact';
+@import 'pages/aboutUs';
+@import 'pages/category';
+@import 'pages/courseSale';
+
+@import 'components/headline';
+@import 'components/teachers';
+@import 'components/courses';
+@import 'components/form';
+@import 'components/img';

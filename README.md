@@ -1,6 +1,7 @@
 # Yoga-Website
 
 Dieses Projekt ist Teil des Moduls **Web Development** und wurde im Rahmen einer praktischen Übung zur Erstellung einer Gesundheits-Website entwickelt. Unter der Anleitung eines Professors haben wir uns entschieden, eine Website für ein fiktives Unternehmen zu entwerfen, das Yoga-Kurse anbietet. Das Ziel war es, eine ansprechende und benutzerfreundliche Website zu erstellen, die sowohl ästhetisch als auch funktional die Werte und Angebote des Unternehmens vermittelt.
+> **Hinweis:** Die Website wurde vollständig überarbeitet und entspricht nicht mehr dem ursprünglichen Zustand, der in der Studienabgabe präsentiert wurde.
 
 ## Projektziel
 
