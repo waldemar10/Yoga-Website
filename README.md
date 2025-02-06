@@ -16,7 +16,7 @@ Der Designprozess begann mit einer gründlichen Konzeptentwicklung, bei der wir 
 - **Moodboard-Erstellung**: Visualisierung der grundlegenden Stimmung und Farbgebung der Website.
 - **Logo-Design**: Entwicklung eines Logos, das die sportlichen und spirituellen Aspekte von Yoga vereint.
 - **Persona-Erstellung**: Definieren einer typischen Zielgruppe, bestehend aus jungen Erwachsenen, die durch Yoga ein ausgeglichenes und gesundes Leben führen möchten.
-- **Mockup-Erstellung**: Umsetzen des visuellen Designs in Adobe XD, um das Layout und die Struktur der Website zu planen.
+- **Mockup-Erstellung**: Umsetzen des visuellen Designs in Adobe XD/Figma, um das Layout und die Struktur der Website zu planen.
 
 ## Verwendete Technologien
 
@@ -25,9 +25,4 @@ Da dies unser erstes Website-Projekt war, entschieden wir uns für eine einfache
 - **HTML**: Zum Aufbau der Struktur und Inhalte der Website.
 - **CSS**: Zur Gestaltung und Formatierung der visuellen Elemente, um ein modernes und ansprechendes Design zu schaffen.
 - **JavaScript**: Für einfache Interaktionen und die Verbesserung der Benutzererfahrung.
-
-Da die Website auf statischen Seiten basiert, wurde kein Backend implementiert. Stattdessen liegt der Fokus auf einer klaren Struktur und einer intuitiven Benutzerführung.
-
-## Fazit
-
-Das Projekt hat uns wertvolle Einblicke in die Grundlagen der Webentwicklung gegeben. Durch das Yoga-Thema konnten wir nicht nur technische Fähigkeiten vertiefen, sondern auch unsere Kreativität und unser Verständnis für benutzerorientiertes Design erweitern.
+- **PHP**: Als serverseitige Skriptsprache zur Verarbeitung von Formulardaten, zur Interaktion mit Datenbanken, zur Generierung dynamischer Inhalte der Website.
