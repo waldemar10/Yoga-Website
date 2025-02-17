@@ -1,0 +1,103 @@
+.form-registration{
+  
+  &__wrapper{
+    width: 100%;
+    @include form(transparent,$primaryColor, $primaryColor);
+    flex: 1 1 0px;
+    color: $primaryColor;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    > h3{
+      width: 100%;
+      margin: 20px 0px 10px 0px;
+    }
+    p{ 
+      margin: 5px 0px 5px 0px;
+    > a{
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  }
+  &__dropdown-gender{
+    max-width: 125px;
+    width: 100%;
+    color: $primaryColor;
+  }
+  &__name-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__name-box{
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    width: 100%;
+    margin: 5px 0px 5px 0px;
+    &:first-child{
+      margin-right: 10px;
+    }
+  }
+  &__input{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px 5px 0px;
+  }
+  &__radio-container{
+    margin: 10px 0px 10px 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  }
+  &__radio-box{
+    margin: 5px 15px 10px 0px;
+    > input{
+      margin-right: 5px;
+    }
+  }
+  &__price-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 5px 0px 10px 0px;
+    > div {
+      display: flex;
+      flex-direction: column;
+      > h4 {
+        margin: 0px;
+      }
+    }
+  }
+
+  &__checkbox-box{
+    display: flex;
+    align-items: center;
+    > label{
+      margin-left: 10px;
+    }
+  }
+  &__response-box{
+    margin: 20px 0px 10px 0px;
+    background-color:  $primaryColor;
+    border-radius: 20px;
+    border: 1px solid $secondaryColor;
+    > p{
+      padding: 20px;
+      color:$darkColor;
+      text-align: center;
+    }
+  }
+  &___error{
+    font-size: smaller;
+    color:red;
+  }
+  &__button{
+    @include button($primaryColor, $darkColor);
+  margin-top: 10px;
+  max-width: 100px;
+  width: 100%;
+  }
+}
+  

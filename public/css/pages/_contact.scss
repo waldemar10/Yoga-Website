@@ -34,7 +34,7 @@
   width: 100%;
   margin: 50px;
   > form{
-    @include form($darkColor, $secondaryColor);
+    @include form(transparent,$darkColor, $secondaryColor);
   }
 }
 .contact-button {

@@ -5,7 +5,7 @@ function check_form_error(string $label)
 {
 
     if (isset($_SESSION['form_errors'][$label])) {
-        echo '<span class="form-error">' .
+        echo '<span class="form__error">' .
             $_SESSION["form_errors"][$label]
             .
             '</span>';

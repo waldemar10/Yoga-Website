@@ -1,11 +1,11 @@
-@mixin button ($bgColor, $textColor) {
+@mixin button($bgColor, $textColor) {
   $bgDisabled: rgb(183, 183, 183);
   padding: 10px 20px 10px 20px;
-  background-color: $bgColor; 
-  color: $textColor; 
-  border-radius: 20px; 
+  background-color: $bgColor;
+  color: $textColor;
+  border-radius: 20px;
   transition: transform 0.3s ease;
-  &:hover{
+  &:hover {
     transform: scale(1.1);
   }
   &:disabled {
@@ -18,34 +18,51 @@
   }
 }
 
-@mixin headline ($size, $color) {
+@mixin headline($size, $color) {
   font-size: $size;
   color: $color;
-/*   text-transform: uppercase; */
   font-weight: bold;
 }
 
-@mixin form ($textColor, $borderColor) {
+@mixin form($bgColor, $textColor, $borderColor) {
   display: flex;
   flex-direction: column;
-  color: $textColor;
-  > input,
+  input,
   textarea {
-      padding: 12px 20px;
-      border-radius: 20px;
-      background-color: transparent;
-      border: 1px solid $borderColor;
+    color: $textColor;
+    padding: 12px 20px;
+    border-radius: 20px;
+    background-color: $bgColor;
+    border: 1px solid $borderColor;
+    &:focus {
+      outline: none;
+      border: 1px solid $textColor;
+      box-shadow: 0 0 3px $textColor;
+    }
   }
-  > textarea {
-      height: 150px;
+  select {
+    height: 30px;
+    background-color: $bgColor;
+    font-weight: bolder;
+    padding: 5px 0px 5px 5px;
+    margin: 10px 0px 10px 0px;
+    border: 1px solid $borderColor;
+    border-radius: 10px;
+    cursor: pointer;
+    option {
+      color: $darkColor;
     }
-  > label{
-      margin: 10px 0px 5px 0px;
-      font-weight: bold;
-    }
+  }
+  textarea {
+    height: 150px;
+  }
+  label {
+    margin: 10px 0px 10px 0px;
+    font-weight: bolder;
+  }
 }
 
-@mixin img ($radius, $maxWidth, $minWidth) {
+@mixin img($radius, $maxWidth, $minWidth) {
   max-width: $maxWidth;
   min-width: $minWidth;
   width: 100%;
