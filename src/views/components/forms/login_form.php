@@ -2,7 +2,7 @@
     <h3>Anmelden</h3>
     <p>
         Um sich für einen Kurs anmelden zu können, benötigst du ein Konto.
-        Du hast kein Konto? <a href="/registration">Erstelle ein Konto.</a>
+        Du hast kein Konto? <a href="/auth?type=register">Erstelle ein Konto.</a>
     </p>
 
     <div class="auth-form__input">

@@ -2,7 +2,7 @@
     <h3>Konto erstellen</h3>
     <p>
         Um sich für einen Kurs anmelden zu können, benötigst du ein Konto.
-        Du hast schon ein Konto? <a href="/login">Melde dich an.</a>
+        Du hast schon ein Konto? <a href="/auth?type=login">Melde dich an.</a>
     </p>
     <select class="auth-form__dropdown-gender" required>
         <option value="Male">Herr</option>
