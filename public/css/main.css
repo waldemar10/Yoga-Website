@@ -1221,29 +1221,29 @@ a:active {
     padding: 20px;
   }
 }
-.registration__wrapper {
+.auth__wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /*  align-items: center; */
   background-color: #444444;
   border-radius: 50px;
   padding: 20px;
-  margin: 50px 10px 50px 10px;
+  margin: 50px 10px;
 }
 @media screen and (max-width: 768px) {
-  .registration__wrapper {
+  .auth__wrapper {
     padding: 10px;
   }
 }
-.registration__image {
+.auth__image {
   flex: 1 1 0px;
   width: 100%;
   height: 100%;
   border-radius: 50px;
-  margin: 0px 20px 0px 20px;
+  margin: 0 20px;
 }
 @media screen and (max-width: 768px) {
-  .registration__image {
+  .auth__image {
     display: none;
   }
 }
@@ -1355,7 +1355,7 @@ a:active {
   color: #444444;
 }
 
-.form-registration__wrapper {
+.auth-form__wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1365,21 +1365,21 @@ a:active {
   flex-direction: column;
   padding: 20px;
 }
-.form-registration__wrapper input,
-.form-registration__wrapper textarea {
+.auth-form__wrapper input,
+.auth-form__wrapper textarea {
   color: #dfd1c9;
   padding: 12px 20px;
   border-radius: 20px;
   background-color: transparent;
   border: 1px solid #dfd1c9;
 }
-.form-registration__wrapper input:focus,
-.form-registration__wrapper textarea:focus {
+.auth-form__wrapper input:focus,
+.auth-form__wrapper textarea:focus {
   outline: none;
   border: 1px solid #dfd1c9;
   box-shadow: 0 0 3px #dfd1c9;
 }
-.form-registration__wrapper select {
+.auth-form__wrapper select {
   height: 30px;
   background-color: transparent;
   font-weight: bolder;
@@ -1389,100 +1389,108 @@ a:active {
   border-radius: 10px;
   cursor: pointer;
 }
-.form-registration__wrapper select option {
+.auth-form__wrapper select option {
   color: #444444;
 }
-.form-registration__wrapper textarea {
+.auth-form__wrapper textarea {
   height: 150px;
 }
-.form-registration__wrapper label {
+.auth-form__wrapper label {
   margin: 10px 0px 10px 0px;
   font-weight: bolder;
 }
-.form-registration__wrapper > h3 {
+.auth-form__wrapper > h3 {
   width: 100%;
   margin: 20px 0px 10px 0px;
 }
-.form-registration__wrapper p {
+.auth-form__wrapper p {
   margin: 5px 0px 5px 0px;
 }
-.form-registration__wrapper p > a {
+.auth-form__wrapper p > a {
   text-decoration: underline;
   cursor: pointer;
 }
-.form-registration__dropdown-gender {
+.auth-form__wrapper p > a:visited {
+  color: #dfd1c9;
+}
+.auth-form__wrapper p > a:hover {
+  color: #716d64;
+}
+.auth-form__dropdown-gender {
   max-width: 125px;
   width: 100%;
   color: #dfd1c9;
 }
-.form-registration__name-container {
+.auth-form__name-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.form-registration__name-box {
+.auth-form__name-box {
   display: flex;
   flex-direction: column;
   max-width: 250px;
   width: 100%;
   margin: 5px 0px 5px 0px;
 }
-.form-registration__name-box:first-child {
+.auth-form__name-box:first-child {
   margin-right: 10px;
 }
-.form-registration__input {
+.auth-form__input {
   display: flex;
   flex-direction: column;
   margin: 5px 0px 5px 0px;
+  max-width: 400px;
+  width: 100%;
 }
-.form-registration__radio-container {
+.auth-form__radio-container {
   margin: 10px 0px 10px 0px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-.form-registration__radio-box {
+.auth-form__radio-box {
   margin: 5px 15px 10px 0px;
 }
-.form-registration__radio-box > input {
+.auth-form__radio-box > input {
   margin-right: 5px;
 }
-.form-registration__price-box {
+.auth-form__price-box {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin: 5px 0px 10px 0px;
 }
-.form-registration__price-box > div {
+.auth-form__price-box > div {
   display: flex;
   flex-direction: column;
 }
-.form-registration__price-box > div > h4 {
+.auth-form__price-box > div > h4 {
   margin: 0px;
 }
-.form-registration__checkbox-box {
+.auth-form__checkbox-box {
   display: flex;
   align-items: center;
 }
-.form-registration__checkbox-box > label {
+.auth-form__checkbox-box > label {
   margin-left: 10px;
 }
-.form-registration__response-box {
+.auth-form__response-box {
   margin: 20px 0px 10px 0px;
   background-color: #dfd1c9;
   border-radius: 20px;
   border: 1px solid #716d64;
 }
-.form-registration__response-box > p {
+.auth-form__response-box > p {
   padding: 20px;
   color: #444444;
   text-align: center;
 }
-.form-registration___error {
+.auth-form___error {
   font-size: smaller;
   color: red;
 }
-.form-registration__button {
+.auth-form__button {
   padding: 10px 20px 10px 20px;
   background-color: #dfd1c9;
   color: #444444;
@@ -1492,15 +1500,15 @@ a:active {
   max-width: 100px;
   width: 100%;
 }
-.form-registration__button:hover {
+.auth-form__button:hover {
   transform: scale(1.1);
 }
-.form-registration__button:disabled {
+.auth-form__button:disabled {
   cursor: not-allowed;
   background-color: rgb(183, 183, 183);
   text-decoration: line-through !important;
 }
-.form-registration__button:disabled:hover {
+.auth-form__button:disabled:hover {
   transform: none;
 }
 

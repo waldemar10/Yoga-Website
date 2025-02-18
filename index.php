@@ -27,6 +27,7 @@ $routes = [
     '/course/{course}' => ['controller' => 'CourseController', 'action' => 'show'],
     '/courseSchedule' => ['controller' => 'CourseScheduleController', 'action' => 'index'],
     '/registration' => ['controller' => 'RegistrationController', 'action' => 'index'],
+    '/login' => ['controller' => 'LoginController', 'action' => 'index'],
 ];
 
 function matchRoute($urlPath, $routes)
