@@ -48,7 +48,7 @@ include_once __DIR__ . '/../form_errors_view.inc.php'; */
                 <label>Bitte bestätige, dass du die <a>AGBs</a> gelesen hast</label>
             </div>
         </div>
-        <div class="form-response-box">
+        <div class="notice">
             <p>Derzeit funktioniert die Anmeldung für unsere Kurse nicht.</p>
         </div>
         <button class="course-sale-button" disabled>Absenden</button>

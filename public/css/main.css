@@ -1248,6 +1248,97 @@ a:active {
   }
 }
 
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.profile__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+  color: #dfd1c9;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 50px;
+  background-color: #444444;
+}
+.profile__container h3 {
+  margin-bottom: 10px;
+}
+.profile__text {
+  width: 100%;
+  color: #444444;
+  text-align: center;
+  padding: 20px;
+}
+.profile__invoices, .profile__payment-method, .profile__courses, .profile__checkbox {
+  max-width: 400px;
+  width: 100%;
+}
+.profile__invoice {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.profile__invoice:last-child {
+  margin-top: 10px;
+}
+.profile__invoice:last-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #dfd1c9;
+  margin-top: -5px;
+}
+.profile__course {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.profile__button {
+  padding: 10px 20px 10px 20px;
+  background-color: #716d64;
+  color: #f4f4f4;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  margin-top: 10px;
+  max-width: 200px;
+  width: 100%;
+}
+.profile__button:hover {
+  transform: scale(1.1);
+}
+.profile__button:disabled {
+  cursor: not-allowed;
+  background-color: rgb(183, 183, 183);
+  text-decoration: line-through !important;
+}
+.profile__button:disabled:hover {
+  transform: none;
+}
+.profile__button--delete {
+  background-color: #d9534f;
+  color: white;
+  border: 2px solid #d9534f;
+}
+.profile__button--delete:hover {
+  background-color: #c9302c;
+  box-shadow: 0 0 10px #c9302c;
+}
+.profile__button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .headline {
   font-size: 48px;
   color: #444444;
@@ -1363,7 +1454,7 @@ a:active {
   color: #dfd1c9;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 0px 20px;
 }
 .auth-form__wrapper input,
 .auth-form__wrapper textarea {
@@ -1471,6 +1562,7 @@ a:active {
 .auth-form__checkbox-box {
   display: flex;
   align-items: center;
+  margin: 5px 0;
 }
 .auth-form__checkbox-box > label {
   margin-left: 10px;
@@ -1497,7 +1589,7 @@ a:active {
   border-radius: 20px;
   transition: transform 0.3s ease;
   margin-top: 10px;
-  max-width: 100px;
+  max-width: 150px;
   width: 100%;
 }
 .auth-form__button:hover {
@@ -1518,4 +1610,63 @@ a:active {
   height: 100%;
   border-radius: 50px;
   margin: 0px 20px 0px 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch input:checked + .slider {
+  background-color: #dfd1c9;
+}
+.switch input:checked + .slider:before {
+  background-color: #716d64;
+}
+.switch input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #716d64;
+  transition: all 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-color: #dfd1c9;
+  transition: all 0.4s;
+}
+
+.slider.round {
+  border-radius: 20px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.notice {
+  margin: 20px 0px 10px 0px;
+  background-color: #dfd1c9;
+  border-radius: 20px;
+  border: 1px solid #716d64;
+}
+.notice > p {
+  padding: 20px;
+  color: #444444;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

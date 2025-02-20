@@ -29,6 +29,7 @@ $routes = [
     '/registration' => ['controller' => 'RegistrationController', 'action' => 'index'],
     '/login' => ['controller' => 'LoginController', 'action' => 'index'],
     '/auth' => ['controller' => 'AuthController', 'action' => 'index'],
+    '/profile' => ['controller' => 'ProfileController', 'action' => 'index'],
 ];
 
 function matchRoute($urlPath, $routes)

@@ -7,7 +7,7 @@
       color: $primaryColor;
       display: flex;
       flex-direction: column;
-      padding: 20px;
+      padding: 0px 20px;
       > h3{
         width: 100%;
         margin: 20px 0px 10px 0px;
@@ -82,6 +82,7 @@
     &__checkbox-box{
       display: flex;
       align-items: center;
+      margin: 5px 0;
       > label{
         margin-left: 10px;
       }
@@ -104,7 +105,7 @@
     &__button{
       @include button($primaryColor, $darkColor);
     margin-top: 10px;
-    max-width: 100px;
+    max-width: 150px;
     width: 100%;
     }
   }
