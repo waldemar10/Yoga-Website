@@ -4,6 +4,9 @@ namespace App\controllers;
 
 class CategoryController
 {
+    public function __construct($pdo) {
+        
+    }
     public function index()
     {
         $title = "Unsere Kurse";

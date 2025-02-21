@@ -4,6 +4,9 @@ namespace App\controllers;
 
 class HomeController
 {
+    public function __construct($pdo) {
+        
+    }
     public function index()
     {
         $title = "Willkommen bei PureBalance Yoga";

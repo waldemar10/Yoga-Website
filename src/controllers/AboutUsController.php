@@ -3,6 +3,10 @@
 namespace App\controllers;
 
 class AboutUsController{
+    public function __construct($pdo) {
+        
+    }
+
     public function index(){
         $title = "Über uns";
         $content = __DIR__ . '/../views/pages/aboutUs.php';

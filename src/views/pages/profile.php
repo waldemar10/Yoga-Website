@@ -1,6 +1,6 @@
 <div class="layout">
     <h1 class="headline">
-        Hallo !
+        Hallo User!
     </h1>
     <p class="profile__text">
         Hier findest du alle Informationen zu deinem Profil. Du kannst deine

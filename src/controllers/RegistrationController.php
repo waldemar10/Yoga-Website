@@ -3,6 +3,9 @@
 namespace App\controllers;
 
 class RegistrationController{
+    public function __construct($pdo) {
+        
+    }
     public function index()
     {
         $title = "Registrierung";

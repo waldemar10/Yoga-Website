@@ -14,6 +14,8 @@ $smtpPort = $_ENV['SMTP_PORT'];
 $smtpUser = $_ENV['SMTP_USER'];
 $smtpPass = $_ENV['SMTP_PASS'];
 
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'dbh.inc.php';
+
 $requestUri = $_SERVER['REQUEST_URI'];
 
 $urlPath = parse_url($requestUri, PHP_URL_PATH);
@@ -29,6 +31,7 @@ $routes = [
     '/registration' => ['controller' => 'RegistrationController', 'action' => 'index'],
     '/login' => ['controller' => 'LoginController', 'action' => 'index'],
     '/auth' => ['controller' => 'AuthController', 'action' => 'index'],
+    '/register' => ['controller' => 'AuthController', 'action' => 'register'],
     '/profile' => ['controller' => 'ProfileController', 'action' => 'index'],
 ];
 
@@ -64,7 +67,8 @@ function dispatch($controllerName, $actionName, $params = [])
     $controllerClass = 'App\\controllers\\' . $controllerName;
 
     if (class_exists($controllerClass)) {
-        $controller = new $controllerClass();
+        global $pdo;
+        $controller = new $controllerClass($pdo);
         if (method_exists($controller, $actionName)) {
             call_user_func_array([$controller, $actionName], $params); // Parameter übergeben
         } else {

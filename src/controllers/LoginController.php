@@ -3,6 +3,9 @@
 namespace App\controllers;
 
 class LoginController{
+    public function __construct($pdo) {
+        
+    }
     public function index(){
         $title = "Login";
         $content = __DIR__ . '/../views/pages/login.php';

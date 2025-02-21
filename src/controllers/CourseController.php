@@ -3,6 +3,9 @@
 namespace App\controllers;
 
 class CourseController {
+    public function __construct($pdo) {
+        
+    }
     public function show($course) {
         $courses = [
             'goodMorningYoga' => ['title' => 'Guten Morgen Yoga', 'view' => 'goodMorningYoga.php'],

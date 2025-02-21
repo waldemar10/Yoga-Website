@@ -98,10 +98,7 @@
         text-align: center;
       }
     }
-    &___error{
-      font-size: smaller;
-      color:red;
-    }
+
     &__button{
       @include button($primaryColor, $darkColor);
     margin-top: 10px;

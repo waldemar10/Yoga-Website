@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/../../../includes/config_session.inc.php';
-include_once __DIR__ . "/../form_errors_view.inc.php";
+include_once __DIR__ . '/../form_errors_view.inc.php';
 
 ?>
 

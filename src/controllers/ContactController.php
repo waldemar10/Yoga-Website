@@ -11,6 +11,10 @@ include_once __DIR__ . "/../views/components/form_errors_view.inc.php";
 
 class ContactController
 {
+    public function __construct($pdo)
+    {
+
+    }
     public function index()
     {
         $title = "Kontakt";
@@ -26,41 +30,45 @@ class ContactController
 
             $errors = [];
 
-            if (empty($name)) $errors['name'] = "Name ist erforderlich.";
-            if (empty($email)) $errors['email'] = "E-Mail ist erforderlich.";
-            elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors['email'] = "Ungültige E-Mail.";
-            if (empty($message)) $errors['message'] = "Nachricht ist erforderlich.";
+            if (empty($name))
+                $errors['name'] = "Name ist erforderlich.";
+            if (empty($email))
+                $errors['email'] = "E-Mail ist erforderlich.";
+            elseif (!filter_var($email, FILTER_VALIDATE_EMAIL))
+                $errors['email'] = "Ungültige E-Mail.";
+            if (empty($message))
+                $errors['message'] = "Nachricht ist erforderlich.";
 
             if (empty($errors)) {
-                require_once __DIR__ . '/../../vendor/autoload.php'; 
-    
+                require_once __DIR__ . '/../../vendor/autoload.php';
+
                 $mail = new PHPMailer(true);
-    
+
                 try {
                     // Server-Einstellungen
-                    $mail->isSMTP();                                         
-                    $mail->Host       = $_ENV['SMTP_HOST'];                 
-                    $mail->SMTPAuth   = true;                                  
-                    $mail->Username   = $_ENV['SMTP_USER'];                
-                    $mail->Password   = $_ENV['SMTP_PASS'];             
-                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;        
-                    $mail->Port       = $_ENV['SMTP_PORT'];                                  
-    
+                    $mail->isSMTP();
+                    $mail->Host = $_ENV['SMTP_HOST'];
+                    $mail->SMTPAuth = true;
+                    $mail->Username = $_ENV['SMTP_USER'];
+                    $mail->Password = $_ENV['SMTP_PASS'];
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+                    $mail->Port = $_ENV['SMTP_PORT'];
+
                     // Absender und Empfänger
-                    $mail->setFrom($email, $name);                            
-                    $mail->addAddress('waljuscontact@gmail.com', 'Admin');    
-    
+                    $mail->setFrom($email, $name);
+                    $mail->addAddress('waljuscontact@gmail.com', 'Admin');
+
                     // Inhalt der E-Mail
-                    $mail->isHTML(true);                                  
+                    $mail->isHTML(true);
                     $mail->Subject = 'Neue Kontaktanfrage';
-                    $mail->Body    = "<p><strong>Name:</strong> $name</p>
+                    $mail->Body = "<p><strong>Name:</strong> $name</p>
                                       <p><strong>E-Mail:</strong> $email</p>
                                       <p><strong>Nachricht:</strong></p>
                                       <p>$message</p>";
                     $mail->AltBody = "Name: $name\nE-Mail: $email\nNachricht:\n$message";
-    
-                    $mail->send(); 
-    
+
+                    $mail->send();
+
                     header("Location: /contact?success=true");
                     exit();
                 } catch (Exception $e) {
