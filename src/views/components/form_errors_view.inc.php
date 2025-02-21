@@ -16,4 +16,10 @@ function check_form_error(string $label)
             .
             '</span>';
     }
+    if(isset($_SESSION['login_errors'][$label])) {
+        echo '<span class="form__error">' .
+            $_SESSION["login_errors"][$label]
+            .
+            '</span>';
+    }
 }

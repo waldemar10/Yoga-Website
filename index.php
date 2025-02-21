@@ -29,7 +29,7 @@ $routes = [
     '/course/{course}' => ['controller' => 'CourseController', 'action' => 'show'],
     '/courseSchedule' => ['controller' => 'CourseScheduleController', 'action' => 'index'],
     '/registration' => ['controller' => 'RegistrationController', 'action' => 'index'],
-    '/login' => ['controller' => 'LoginController', 'action' => 'index'],
+    '/login' => ['controller' => 'AuthController', 'action' => 'login'],
     '/auth' => ['controller' => 'AuthController', 'action' => 'index'],
     '/register' => ['controller' => 'AuthController', 'action' => 'register'],
     '/profile' => ['controller' => 'ProfileController', 'action' => 'index'],

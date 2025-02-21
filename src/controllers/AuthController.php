@@ -9,10 +9,11 @@ require_once __DIR__ . '/../includes/config_session.inc.php';
 class AuthController
 {
     private $pdo;
-
+    private $userModel;
     public function __construct($pdo)
     {
         $this->pdo = $pdo;
+        $this->userModel = new UserModel($pdo);
     }
     public function index()
     {
@@ -22,6 +23,40 @@ class AuthController
         $content = __DIR__ . '/../views/pages/auth.php';
         include_once __DIR__ . '/../views/layouts/main.php';
     }
+    public function login()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $email = $_POST['email'] ?? null;
+            $password = $_POST['password'] ?? null;
+            $errors = [];
+
+            if (!$email || !$password) {
+                require_once __DIR__ . '/../includes/config_session.inc.php';
+                $errors["empty"] = 'Bitte fülle alle Felder aus.';
+                $_SESSION['login_errors'] = $errors;
+                $password = $email = '';
+                $errors = [];
+                header("Location: /auth?type=login&success=false");
+                exit();
+            }
+
+            $user = $this->userModel->authenticate($email, $password);
+
+            if ($user) {
+                header("Location: /profile");
+                exit();
+            } else {
+                require_once __DIR__ . '/../includes/config_session.inc.php';
+                $errors["wrong"] = "E-Mail oder Passwort falsch.";
+                $_SESSION['login_errors'] = $errors;
+                $errors = [];
+                header("Location: /auth?type=login&success=false");
+                exit();
+            }
+        }
+    }
+
+
 
     public function register()
     {
@@ -42,7 +77,7 @@ class AuthController
             if (!$termsAccepted) {
                 $errors['agb'] = 'Bitte akzeptiere die AGBs.';
             }
-    
+
             if (empty($gender)) {
                 $errors['gender'] = 'Bitte wähle ein Geschlecht aus.';
             }
@@ -64,24 +99,24 @@ class AuthController
             if (empty($paymentMethod)) {
                 $errors['payment_method'] = 'Bitte wähle eine Zahlungsmethode aus.';
             }
-    
+
             if ($password !== $passwordRepeat) {
                 $errors['password_wrong_repeat'] = 'Passwörter stimmen nicht überein.';
             }
             if (!empty($errors)) {
                 require_once __DIR__ . '/../includes/config_session.inc.php';
                 $_SESSION['register_errors'] = $errors;
-                $gender = $firstName = $lastName = $email = $passwordRepeat = $password = $passwordRepeat= $paymentMethod = '';
+                $gender = $firstName = $lastName = $email = $passwordRepeat = $password = $passwordRepeat = $paymentMethod = '';
                 $errors = [];
-       
+
                 header("Location: /auth?type=register");
                 exit();
             }
-    
-            $userModel = new UserModel($this->pdo);
+
+            /* $userModel = new UserModel($this->pdo); */
 
             if (
-                $userModel->createUser(
+                $this->userModel->createUser(
                     $gender,
                     $firstName,
                     $lastName,
