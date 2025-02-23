@@ -2,10 +2,10 @@
     <h1 class="headline">
         Hatha Yoga
     </h1>
-    <div class="course-sale-wrapper">
+    <div class="course-sale__wrapper">
         <img loading="lazy" src="/public/images/courses/HathaYoga.jpg" />
-        <div class="course-sale-container">
-            <div class="course-sale-box">
+        <div class="course-sale__container">
+            <div class="course-sale__box">
                 <h3>Die Balance zwischen Körper und Geist</h3>
                 <p>
                     Hatha Yoga ist eine der bekanntesten und ältesten Formen des Yoga,
@@ -19,7 +19,7 @@
                     zu schaffen und die Energie im Körper zu harmonisieren.
                 </p>
             </div>
-            <div class="course-sale-box">
+            <div class="course-sale__box">
                 <h3>Warum ist Hatha Yoga gut?</h3>
                 Hatha Yoga fördert nicht nur die körperliche Flexibilität und
                 Kraft, sondern hilft auch, Stress abzubauen und das allgemeine

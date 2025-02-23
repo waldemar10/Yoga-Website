@@ -1,18 +1,18 @@
-<div class="footer-navigation-container">
+<div class="footer__navigation-container">
     <?php foreach ($menuItems as $name => $link): ?>
         <a href="<?= $link ?>"><?= $name ?></a>
 
     <?php endforeach; ?>
 </div>
-<div class="footer-social-icons-container">
+<div class="footer__social-icons-container">
     <?php foreach ($socialLinks as $platform => $link): ?>
         <a href="<?= $link ?>"><i class="fab fa-<?= $platform ?> footer-social-icon"></i></a>
     <?php endforeach; ?>
 </div>
 
-<div class="footer-contact-container">
+<div class="footer__contact-container">
     <?php foreach ($contactDetails as $type => $detail): ?>
-        <div class="footer-contact-<?= $type ?>">
+        <div class="footer__contact-<?= $type ?>">
             <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                 <?php
                 switch ($type) {
@@ -34,9 +34,9 @@
         </div>
     <?php endforeach; ?>
 </div>
-<div class="footer-legal-container">
-    <p class="footer-legal-info">Copyright © 2020-2024 PureBalance Yoga</p>
-    <div class="footer-legal-links">
+<div class="footer__legal-container">
+    <p class="footer__legal-info">Copyright © 2020-2024 PureBalance Yoga</p>
+    <div class="footer__legal-links">
         <a href="#impressum">Impressum</a>
         <a href="#datenschutz">Datenschutz</a>
     </div>

@@ -1,5 +1,5 @@
-<div class="category-box">
-    <div class="course-container">
+<div class="category__box">
+    <div class="course__container">
         <?php
         function renderCourses($courses, $class = "")
         {
@@ -11,12 +11,12 @@
                 $courseName = trim(strtolower(str_replace(' ', '', $course['name'])));
                 $courseNameImg = trim(str_replace(' ', '', $course['name']));
                 echo '<a href="/course/' . $courseName . '">
-                    <div class="course-box ' . $class . '">
-                        <div class="course-text">
+                    <div class="course__box ' . $class . '">
+                        <div class="course__text">
                             <h3>' . htmlspecialchars($course['name']) . '</h3>
                         </div>
                         <img loading="lazy" 
-                        class="course-image"
+                        class="course__image"
                         src="/public/images/courses/' . $courseNameImg . '.jpg" 
                         alt="' . htmlspecialchars($course['name']) . '" />
                     </div>
@@ -26,7 +26,7 @@
 
         renderCourses($allCourses ?? []);
         renderCourses($bookedCourses ?? []); 
-        renderCourses($notBookedCourses ?? [], "course-image-filter-grey");
+        renderCourses($notBookedCourses ?? [], "course__image-filter-grey");
         ?>
     </div>
 </div>

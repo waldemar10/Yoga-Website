@@ -2,10 +2,10 @@
     <h1 class="headline">
         Kundalini Yoga
     </h1>
-    <div class="course-sale-wrapper">
+    <div class="course-sale__wrapper">
         <img loading="lazy" src="/public/images/courses/KundaliniYoga.jpg" />
-        <div class="course-sale-container">
-            <div class="course-sale-box">
+        <div class="course-sale__container">
+            <div class="course-sale__box">
                 <h3>Die Praxis zur Erweckung deiner inneren Energie</h3>
                 <p>
                     Kundalini Yoga ist eine transformative Praxis, die darauf abzielt,
@@ -15,7 +15,7 @@
                     Meditation und Mantras, um das Bewusstsein zu erweitern und die innere Energie zu steigern.
                 </p>
             </div>
-            <div class="course-sale-box">
+            <div class="course-sale__box">
                 <h3>Warum ist Kundalini Yoga gut?</h3>
                 Diese Praxis fördert nicht nur die körperliche Gesundheit, sondern auch die
                 geistige Klarheit und spirituelle Entwicklung. Durch die gezielten Übungen

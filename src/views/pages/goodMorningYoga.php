@@ -2,10 +2,10 @@
     <h1 class="headline">
         Guten Morgen Yoga
     </h1>
-    <div class="course-sale-wrapper">
+    <div class="course-sale__wrapper">
         <img  loading="lazy"src="/public/images/courses/GutenMorgenYoga.jpg" />
-        <div class="course-sale-container">
-            <div class="course-sale-box">
+        <div class="course-sale__container">
+            <div class="course-sale__box">
                 <h3>Der perfekte Start in den Tag</h3>
                 <p>
                     Guten Morgen Yoga ist eine wunderbare Praxis,
@@ -17,7 +17,7 @@
                     auf sanfte Bewegungen und achtsame Atmung, um den Körper zu wecken und zu stärken.
                 </p>
             </div>
-            <div class="course-sale-box">
+            <div class="course-sale__box">
                 <h3>Warum Guten Morgen Yoga?</h3>
                 <ol>
                     <li>

@@ -2,10 +2,10 @@
     <h1 class="headline">
         Jivamukti Yoga
     </h1>
-    <div class="course-sale-wrapper">
+    <div class="course-sale__wrapper">
         <img loading="lazy" src="/public/images/courses/JivamuktiYoga.jpg" />
-        <div class="course-sale-container">
-            <div class="course-sale-box">
+        <div class="course-sale__container">
+            <div class="course-sale__box">
                 <h3>Der Weg zu spirituellem Wachstum durch Körper und Geist</h3>
                 <p>
                     Jivamukti Yoga ist eine ganzheitliche Yogatradition, die körperliche Asanas,
@@ -17,7 +17,7 @@
                     und zur Welt um uns herum.
                 </p>
             </div>
-            <div class="course-sale-box">
+            <div class="course-sale__box">
                 <h3>Warum ist Jivamukti Yoga gut?</h3>
                 Diese praxisorientierte Form des Yoga hilft, das körperliche und geistige Wohlbefinden zu steigern,
                 indem sie sowohl körperliche Kraft und Flexibilität als auch spirituelle Klarheit fördert. Durch die

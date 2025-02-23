@@ -1,8 +1,8 @@
 
-<div id="header-wrapper" class="header-wrapper">
-    <div class="header-navbar-container">
-        <div class="header-logo-container">
-            <a class="header-logo" href="/">
+<div id="header-wrapper" class="header__wrapper">
+    <div class="header__navbar-container">
+        <div class="header__logo-container">
+            <a class="header__logo" href="/">
                 <svg id="Abstraktes_Logo" data-name="Abstraktes Logo" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 170.0 300.0">
                     <path id="logo_rechts"
@@ -23,25 +23,25 @@
             </h3>
         </div>
 
-        <div class="header-navbar-link-container">
-                <div class="header-navbar-link">
+        <div class="header__navbar-link-container">
+                <div class="header__navbar-link">
                     <a href="/category">Kurse</a>
                 </div>
-                <div class="header-navbar-link">
+                <div class="header__navbar-link">
                     <a href="/courseSchedule">Kursplan</a>
                 </div>
-                <div class="header-navbar-link">
+                <div class="header__navbar-link">
                     <a href="/contact">Kontakt</a>
                 </div>
-                <div class="header-navbar-link">
+                <div class="header__navbar-link">
                     <a href="/aboutUs">Über uns</a>
                 </div>
-                <div class="header-navbar-link">
+                <div class="header__navbar-link">
                     <a href="/auth">Konto</a>
                 </div>
         </div>
 
-        <button class="header-burger-menu" data-state="closed">
+        <button class="header__burger-menu" data-state="closed">
             <div class="burger-menu-icon">
                 <span class="burger-lines"></span>
             </div>
@@ -49,7 +49,7 @@
 
     </div>
 
-    <div class="header-navbar-link-container-burger-menu">
+    <div class="header__navbar-link-container-burger-menu">
             <a href="/category">Kurse</a>
             <a href="/courseSchedule">Kursplan</a>
             <a href="/contact">Kontakt</a>

@@ -2,10 +2,10 @@
     <h1 class="headline">
         Yoga Nidra
     </h1>
-    <div class="course-sale-wrapper">
+    <div class="course-sale__wrapper">
         <img loading="lazy" src="/public/images/courses/YogaNidra.jpg" />
-        <div class="course-sale-container">
-            <div class="course-sale-box">
+        <div class="course-sale__container">
+            <div class="course-sale__box">
                 <h3>Der Weg zu tiefer Entspannung und innerer Ruhe</h3>
                 <p>
                     Yoga Nidra, auch bekannt als „Yogischer Schlaf“,
@@ -16,7 +16,7 @@
                     zwischen Wachsein und Schlaf versetzen.
                 </p>
             </div>
-            <div class="course-sale-box">
+            <div class="course-sale__box">
                 <h3>Warum ist Yoga Nidra gut?</h3>
                 Diese Praxis hat zahlreiche gesundheitliche Vorteile. Sie fördert
                 tiefe Entspannung und hilft, Stress abzubauen, indem sie das Nervensystem

@@ -1,202 +1,204 @@
-.home-hero-container {
-  position: relative;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  width: 100%;
-  height: 100%;
-  border-radius: 50px;
-  overflow: hidden;
-}
-.home-hero-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-.home-hero-box {
-  user-select: none;
-  position: relative;
-  z-index: 1;
-  color: white;
-  grid-row: 3;
-  grid-column: 2;
-  padding: 20px;
-  text-align: center;
-  h1 {
-    font-size: 5rem;
+.home {
+  &__hero-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    overflow: hidden;
   }
-}
-.home-courses-text {
-  margin: 20px;
-  font-size: 2rem;
-  text-align: center;
-}
-
-.home-yoga-quote-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 30px;
-}
-.home-yoga-quote-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 450px;
-  text-align: center;
-  color: $darkColor;
-  h2 {
-    padding: 10px;
+  &__hero-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
   }
-  img {
-    width: 100px;
-    height: 100px;
-    object-fit: fill;
-    border-radius: 50%;
-    margin: 20px;
-    box-shadow: 1px 1px 10px 1px $darkColor;
-  }
-}
-
-.home-benefits-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 35px;
-  padding: 20px;
-  background-color: $darkColor;
-  border-radius: 50px;
-  h2 {
+  &__hero-box {
+    user-select: none;
+    position: relative;
+    z-index: 1;
+    color: white;
+    grid-row: 3;
+    grid-column: 2;
+    padding: 20px;
     text-align: center;
+    h1 {
+      font-size: 5rem;
+    }
+  }
+  &__courses-text {
     margin: 20px;
-    padding: 10px;
-    color: $lightColor;
+    font-size: 2rem;
+    text-align: center;
   }
-}
 
-.home-benefits-container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  justify-self: center;
-  gap: 20px;
-}
-.home-benefits-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: $primaryColor;
-  width: 250px;
-  height: 150px;
-  border-radius: 30px;
-  margin: 15px;
-  text-align: center;
-  svg {
-    width: 50px;
-    height: 50px;
-    margin: 10px;
-    stroke: $darkColor;
+  &__yoga-quote-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
   }
-  p {
+  &__yoga-quote-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 450px;
+    text-align: center;
     color: $darkColor;
-    margin: 10px;
+    h2 {
+      padding: 10px;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: fill;
+      border-radius: 50%;
+      margin: 20px;
+      box-shadow: 1px 1px 10px 1px $darkColor;
+    }
   }
-}
 
-.home-sale-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: $darkColor;
-  border-radius: 50px;
-  margin: 20px 10px 50px 10px;
-  padding: 20px;
-  h2 {
-    text-align: center;
-    color: $lightColor;
-    margin: 20px;
+  &__benefits-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 35px;
+    padding: 20px;
+    background-color: $darkColor;
+    border-radius: 50px;
+    h2 {
+      text-align: center;
+      margin: 20px;
+      padding: 10px;
+      color: $lightColor;
+    }
   }
-}
-.home-testimonials-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 20px;
-}
-.home-testimonials-box {
-  display: flex;
-  flex-direction: column;
-  width: 250px;
-  height: 350px;
-  margin: 10px;
-  background-color: $primaryColor;
-  border-radius: 20px;
-}
-.home-testimonials-image {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin: 20px;
-}
-.home-testimonials-image-box {
-  display: flex;
-  align-items: center;
-}
-.home-testimonials-review-box {
-  display: flex;
-  flex-direction: column;
-  color: $darkColor;
-}
-.home-testimonials-text {
-  font-size: 0.9rem;
-  color: $darkColor;
-  margin: 0px 20px 20px 20px;
-}
-.home-testimonials-stars {
-  font-size: 1.3rem;
-}
 
-@media screen and (max-width: 1000px) {
-  .home-hero-container {
-    border-radius: 0px;
-  }
-  .home-teachers-container {
+  &__benefits-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
     gap: 20px;
   }
-}
-
-/*Tablet*/
-@media screen and (max-width: 768px) {
-  .home-hero-box {
-    h1 {
-      font-size: 3rem;
-    }
-  }
-}
-/*Smartphone*/
-@media screen and (max-width: 400px) {
-  .home-hero-box {
-    h1 {
-      font-size: 2rem;
-    }
-  }
-  .home-sale-course-container {
+  &__benefits-box {
     display: flex;
-    justify-content: flex-start;
-    overflow-x: scroll;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $primaryColor;
+    width: 250px;
+    height: 150px;
+    border-radius: 30px;
+    margin: 15px;
+    text-align: center;
+    svg {
+      width: 50px;
+      height: 50px;
+      margin: 10px;
+      stroke: $darkColor;
+    }
+    p {
+      color: $darkColor;
+      margin: 10px;
+    }
+  }
+
+  &__sale-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $darkColor;
+    border-radius: 50px;
+    margin: 20px 10px 50px 10px;
+    padding: 20px;
+    h2 {
+      text-align: center;
+      color: $lightColor;
+      margin: 20px;
+    }
+  }
+  &__testimonials-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+  &__testimonials-box {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 350px;
+    margin: 10px;
+    background-color: $primaryColor;
+    border-radius: 20px;
+  }
+  &__testimonials-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px;
+  }
+  &__testimonials-image-box {
+    display: flex;
+    align-items: center;
+  }
+  &__testimonials-review-box {
+    display: flex;
+    flex-direction: column;
+    color: $darkColor;
+  }
+  &__testimonials-text {
+    font-size: 0.9rem;
+    color: $darkColor;
+    margin: 0px 20px 20px 20px;
+  }
+  &__testimonials-stars {
+    font-size: 1.3rem;
+  }
+
+  @media screen and (max-width: 1000px) {
+    &__hero-container {
+      border-radius: 0px;
+    }
+    &__teachers-container {
+      gap: 20px;
+    }
+  }
+
+  /*Tablet*/
+  @media screen and (max-width: 768px) {
+    &__hero-box {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+  /*Smartphone*/
+  @media screen and (max-width: 400px) {
+    &__hero-box {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    &__sale-course-container {
+      display: flex;
+      justify-content: flex-start;
+      overflow-x: scroll;
+      flex-wrap: nowrap;
+    }
   }
 }

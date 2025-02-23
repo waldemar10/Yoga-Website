@@ -1,6 +1,6 @@
 export function setMarginTopForHighlightImage() {
   const wrapper = document
-    .querySelector(".header-navbar-container")
+    .querySelector(".header__navbar-container")
     .getBoundingClientRect();
   const highlightImageMarginTop = document.querySelector(".layout");
   if (!highlightImageMarginTop || !wrapper) return;

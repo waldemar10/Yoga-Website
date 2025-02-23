@@ -1,51 +1,57 @@
-.contact-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  color: $darkColor;
-  margin: 50px 10px 50px 10px;
-}
-.contact-box-wrapper,.contact-box,.contact-form{
-  display: flex;
-  flex-direction: column;
-}
-.contact-box-wrapper{
+.contact {
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: $darkColor;
+    margin: 50px 10px 50px 10px;
+  }
+  &__box-wrapper,
+  &__box,
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__box-wrapper {
     margin: 50px;
-}
-.contact-box {
-  margin: 0px 0px 10px 0px;
-  > h3 {
-    margin: 0px 0px 5px 0px;
   }
-}
-.contact-data {
-  display: flex;
-  align-items: center;
-  margin: 5px 0px 5px 0px;
-  > svg {
-    stroke: $darkColor;
-    margin-right: 10px;
+  &__box {
+    margin: 0px 0px 10px 0px;
+    > h3 {
+      margin: 0px 0px 5px 0px;
+    }
   }
-}
+  &__data {
+    display: flex;
+    align-items: center;
+    margin: 5px 0px 5px 0px;
+    > svg {
+      stroke: $darkColor;
+      margin-right: 10px;
+    }
+  }
 
-.contact-form-wrapper {
-  color: $darkColor;
-  max-width: 400px;
-  width: 100%;
-  margin: 50px;
-  > form{
-    @include form(transparent,$darkColor, $secondaryColor);
+  &__form-wrapper {
+    color: $darkColor;
+    max-width: 400px;
+    width: 100%;
+    margin: 50px;
+    > form {
+      @include form(transparent, $darkColor, $secondaryColor);
+    }
   }
-}
 
-.contact-maps {
-  max-width: 350px;
-  width: 100%;
-  max-height: 200px;
-  border-radius: 20px;
-}
-@media screen and (max-width: 400px) {
-  .contact-wrapper,.contact-box-wrapper,.contact-form{
-    margin: 10px;
+  &__maps {
+    max-width: 350px;
+    width: 100%;
+    max-height: 200px;
+    border-radius: 20px;
+  }
+  @media screen and (max-width: 400px) {
+    &__wrapper,
+    &__box-wrapper,
+    &__form {
+      margin: 10px;
+    }
   }
 }

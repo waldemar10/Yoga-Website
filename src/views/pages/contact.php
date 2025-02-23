@@ -2,11 +2,11 @@
 
 <div class="layout">
     <h1 class="headline">Kontakt</h1>
-    <div class="contact-wrapper">
-        <div class="contact-box-wrapper">
-            <div class="contact-box">
+    <div class="contact__wrapper">
+        <div class="contact__box-wrapper">
+            <div class="contact__box">
                 <h3>Unser Studio befindet sich hier:</h3>
-                <div class="contact-data">
+                <div class="contact__data">
                     <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                         <circle cx="32.3" cy="27.5" r="7.71" />
                         <path
@@ -15,9 +15,9 @@
                     <p>Kastanienweg 102, Lippstadt 59555</p>
                 </div>
             </div>
-            <div class="contact-box">
+            <div class="contact__box">
                 <h3>So erreichst du uns:</h3>
-                <div class="contact-data">
+                <div class="contact__data">
                     <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                         <rect x="5.5" y="21" width="53" height="34" rx="2" ry="2" />
                         <polyline points="58 21 32 42 6 21" />
@@ -26,7 +26,7 @@
                     </svg>
                     <p>info@purebalanceyoga.com</p>
                 </div>
-                <div class="contact-data">
+                <div class="contact__data">
                     <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                         <path
                             d="M22.56,10.92c-3.1-1.38-9.08,6.25-9.61,9.61-1.5,9.46,18.72,28.69,28.01,32.41,3.19,1.28,10.39-5.86,10.15-9.29-.19-2.78-4.58-8.47-7.36-8.36-.81.03-2.03,1.19-3,2.28-.85.96-2.35.93-3.17-.05l-11.9-12.58c-.76-.91-.61-2.26.32-2.99,1.3-1.02,2.84-2.42,2.89-3.37.12-2.48-3.89-6.57-6.33-7.65Z" />
@@ -36,7 +36,7 @@
                     </p>
                 </div>
             </div>
-            <img loading="lazy" class="contact-maps" src="/public/images/googleMaps.webp" />
+            <img loading="lazy" class="contact__maps" src="/public/images/googleMaps.webp" />
         </div>
         <?php include __DIR__ . '/../components/forms/contact_form.php'; ?>
     </div>

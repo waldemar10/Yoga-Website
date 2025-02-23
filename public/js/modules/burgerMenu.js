@@ -1,7 +1,7 @@
 function handleBurgerMenu() {
-  const button = document.querySelector(".header-burger-menu");
+  const button = document.querySelector(".header__burger-menu");
   const burgerMenuLinks = document.querySelector(
-    ".header-navbar-link-container-burger-menu"
+    ".header__navbar-link-container-burger-menu"
   );
   const headerWrapper = document.querySelector("#header-wrapper");
   if (!burgerMenuLinks || !button) {
@@ -11,7 +11,7 @@ function handleBurgerMenu() {
   const isOpen = button.getAttribute("data-state") === "open";
   if (isOpen) {
     if (window.scrollY === 0) {
-      headerWrapper.classList.remove("header-background");
+      headerWrapper.classList.remove("header__background");
     }
     burgerMenuLinks.classList.remove("burger-menu-fade-in");
     burgerMenuLinks.classList.add("burger-menu-fade-out");
@@ -27,7 +27,7 @@ function handleBurgerMenu() {
     );
   } else {
     if (window.scrollY === 0) {
-      headerWrapper.classList.add("header-background");
+      headerWrapper.classList.add("header__background");
     }
     burgerMenuLinks.style.display = "flex";
 
@@ -38,7 +38,7 @@ function handleBurgerMenu() {
 }
 
 export function initializeBurgerMenu() {
-  const button = document.querySelector(".header-burger-menu");
+  const button = document.querySelector(".header__burger-menu");
   if (!button) {
     return console.error("Element nicht gefunden");
   }

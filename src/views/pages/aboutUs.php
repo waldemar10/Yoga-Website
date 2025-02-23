@@ -19,9 +19,9 @@ $teachers = [
 
     <h1 class="headline">Über uns</h1>
 
-    <div class="aboutus-text-wrapper">
+    <div class="aboutus__text-wrapper">
 
-        <div class="aboutus-text-box">
+        <div class="aboutus__text-box">
             <h2>Das Studio</h2>
             <br>
             Willkommen in unserem Yoga Studio – einem Ort, an dem du die Hektik des Alltags hinter dir lassen
@@ -45,15 +45,15 @@ $teachers = [
     </div>
 
 
-    <div class="teachers-wrapper">
+    <div class="teachers__wrapper">
         <h2>Unsere Yoga-Lehrer</h2>
-        <div class="teachers-container">
+        <div class="teachers__container">
             <?php foreach ($teachers as $teacher): ?>
-                <div class="teachers-box">
+                <div class="teachers__box">
 
-                    <img loading="lazy" class="teachers-image" src="/<?= $teacher['image'] ?>"
+                    <img loading="lazy" class="teachers__image" src="/<?= $teacher['image'] ?>"
                         alt="<?= $teacher['name'] ?>" />
-                    <div class="teachers-text">
+                    <div class="teachers__text">
                         <h3><?= $teacher['name'] ?></h3>
                     </div>
 
@@ -62,8 +62,8 @@ $teachers = [
 
         </div>
     </div>
-    <div class="aboutus-text-wrapper">
-        <div class="aboutus-text-box">
+    <div class="aboutus__text-wrapper">
+        <div class="aboutus__text-box">
             <h2>
                 Unsere Philosophie
             </h2>

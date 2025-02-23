@@ -1,8 +1,8 @@
 <div class="layout">
 
-    <div class="home-hero-container">
-        <img loading="lazy" class="home-hero-image" src="/public/images/YogaStartscreen.jpg" alt="Yoga home" />
-        <div class="home-hero-box">
+    <div class="home__hero-container">
+        <img loading="lazy" class="home__hero-image" src="/public/images/YogaStartscreen.jpg" alt="Yoga home" />
+        <div class="home__hero-box">
             <h1>Finde deine innere Balance.</h1>
 
             <button type="button" class="button__secondary" onclick="location.href='/category';">
@@ -12,9 +12,9 @@
         </div>
     </div>
 
-    <div id="start" class="home-yoga-quote-wrapper">
-        <div class="home-yoga-quote-box">
-            <h2 class=""> Die wahre Kraft liegt in der Ruhe des Geistes</h2>
+    <div id="start" class="home__yoga-quote-wrapper">
+        <div class="home__yoga-quote-box">
+            <h2> Die wahre Kraft liegt in der Ruhe des Geistes</h2>
             <q>Yoga ist mehr als nur eine körperliche Übung – es ist eine Reise zu dir selbst.
                 Wenn du in die Stille eintauchst und deinen Atem mit jeder Bewegung verbindest,
                 findest du nicht nur körperliche Stärke, sondern auch inneren Frieden.
@@ -29,10 +29,10 @@
         </div>
     </div>
 
-    <div class="home-benefits-wrapper">
+    <div class="home__benefits-wrapper">
         <h2>Deine Reise zu mehr Wohlbefinden beginnt hier</h2>
-        <div class="home-benefits-container">
-            <div class="home-benefits-box">
+        <div class="home__benefits-container">
+            <div class="home__benefits-box">
                 <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                     <circle class="cls-1" cx="31.93" cy="10.08" r="5.5" />
                     <path class="cls-1"
@@ -42,7 +42,7 @@
                 </svg>
                 <p>Verbessere Flexibilität und Stärke</p>
             </div>
-            <div class="home-benefits-box">
+            <div class="home__benefits-box">
                 <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
 
                     <circle class="cls-1" cx="20.18" cy="40.27" r="17.73" />
@@ -51,7 +51,7 @@
                 </svg>
                 <p>Finde deine innere Ruhe und Balance</p>
             </div>
-            <div class="home-benefits-box">
+            <div class="home__benefits-box">
                 <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
 
                     <g>
@@ -82,7 +82,7 @@
                 </svg>
                 <p>Individuelle Begleitung für deinen Erfolg</p>
             </div>
-            <div class="home-benefits-box">
+            <div class="home__benefits-box">
                 <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
 
                     <g>
@@ -103,7 +103,7 @@
                 </svg>
                 <p>Kurszeiten, die zu deinem Leben passen</p>
             </div>
-            <div class="home-benefits-box">
+            <div class="home__benefits-box">
                 <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                     <path class="cls-1"
                         d="M53.1,18.22h6.1c.16,0,.29.13.29.29v36.41c0,.16-.13.29-.29.29H4.79c-.16,0-.29-.13-.29-.29V18.52c0-.16.13-.29.29-.29h4.6" />
@@ -119,14 +119,14 @@
         </div>
     </div>
 
-    <div class="teachers-wrapper">
+    <div class="teachers__wrapper">
         <h2>Unsere Yoga-Lehrer</h2>
-        <div class="teachers-container">
+        <div class="teachers__container">
             <?php foreach ($teachers as $teacher): ?>
-                <div class="teachers-box">
+                <div class="teachers__box">
 
-                <img loading="lazy" class="teachers-image" src="<?= $teacher['image'] ?>" alt="<?= $teacher['name'] ?>" />
-                    <div class="teachers-text">
+                <img loading="lazy" class="teachers__image" src="<?= $teacher['image'] ?>" alt="<?= $teacher['name'] ?>" />
+                    <div class="teachers__text">
                         <h3><?= $teacher['name'] ?></h3>
                     </div>
 
@@ -136,46 +136,46 @@
         </div>
     </div>
 
-    <div class="home-sale-box">
+    <div class="home__sale-box">
         <h2>Heißbegehrte Kurse</h2>
-        <div class="course-container">
+        <div class="course__container">
             <a href="/course/hathaYoga">
-                <div class="course-box">
-                    <div class="course-text">
+                <div class="course__box">
+                    <div class="course__text">
                         <h3>Hatha Yoga</h3>
                     </div>
-                    <img loading="lazy" class="course-image" src="/public/images/courses/HathaYoga.jpg" alt="hatha yoga" />
+                    <img loading="lazy" class="course__image" src="/public/images/courses/HathaYoga.jpg" alt="hatha yoga" />
                 </div>
             </a>
             <a href="/course/vinyasaYoga">
-                <div class="course-box">
-                    <div class="course-text">
+                <div class="course__box">
+                    <div class="course__text">
                         <h3>Vinyasa Yoga</h3>
                     </div>
-                    <img loading="lazy" class="course-image" src="/public/images/courses/VinyasaYoga.jpg" alt="Vinyasa Yoga" />
+                    <img loading="lazy" class="course__image" src="/public/images/courses/VinyasaYoga.jpg" alt="Vinyasa Yoga" />
                 </div>
             </a>
             <a href="/course/yoganidra">
-                <div class="course-box">
-                    <div class="course-text">
+                <div class="course__box">
+                    <div class="course__text">
                         <h3>Yoga Nidra</h3>
                     </div>
-                    <img loading="lazy" class="course-image" src="/public/images/courses/YogaNidra.jpg" alt="Yoga Nidra" />
+                    <img loading="lazy" class="course__image" src="/public/images/courses/YogaNidra.jpg" alt="Yoga Nidra" />
                 </div>
             </a>
         </div>
         <h2>Was unsere Kunden sagen</h2>
-        <div class="home-testimonials-container">
+        <div class="home__testimonials-container">
 
-            <div class="home-testimonials-box">
-                <div class="home-testimonials-image-box">
-                <img loading="lazy" class="home-testimonials-image" src="/public/images/testimonials/Kundin1.jpg" alt="Kundin" />
-                    <div class="home-testimonials-review-box">
+            <div class="home__testimonials-box">
+                <div class="home__testimonials-image-box">
+                <img loading="lazy" class="home__testimonials-image" src="/public/images/testimonials/Kundin1.jpg" alt="Kundin" />
+                    <div class="home__testimonials-review-box">
                         <h3>Jana</h3>
-                        <span class="home-testimonials-stars">★★★★★</span>
+                        <span class="home__testimonials-stars">★★★★★</span>
                     </div>
                 </div>
-                <div class="home-testimonials-text">
+                <div class="home__testimonials-text">
 
                     Ich habe schon viele Yogakurse besucht, aber keiner war so inspirierend wie dieser.
                     Die Lehrer sind sehr professionell und gehen individuell auf die Bedürfnisse der
@@ -184,15 +184,15 @@
                 </div>
             </div>
 
-            <div class="home-testimonials-box">
-                <div class="home-testimonials-image-box">
-                <img loading="lazy" class="home-testimonials-image" src="/public/images/testimonials/Kundin2.jpg" alt="Kundin" />
-                    <div class="home-testimonials-review-box">
+            <div class="home__testimonials-box">
+                <div class="home__testimonials-image-box">
+                <img loading="lazy" class="home__testimonials-image" src="/public/images/testimonials/Kundin2.jpg" alt="Kundin" />
+                    <div class="home__testimonials-review-box">
                         <h3>Palina</h3>
-                        <span class="home-testimonials-stars">★★★★★</span>
+                        <span class="home__testimonials-stars">★★★★★</span>
                     </div>
                 </div>
-                <div class="home-testimonials-text">
+                <div class="home__testimonials-text">
 
                     Ich bin begeistert von der Vielfalt der Kurse und der Qualität des Unterrichts.
                     Die Lehrer sind sehr kompetent und einfühlsam und schaffen eine angenehme Atmosphäre,
@@ -201,15 +201,15 @@
                 </div>
             </div>
 
-            <div class="home-testimonials-box">
-                <div class="home-testimonials-image-box">
-                <img loading="lazy" class="home-testimonials-image" src="/public/images/testimonials/Kundin3.jpg" alt="Kundin" />
-                    <div class="home-testimonials-review-box">
+            <div class="home__testimonials-box">
+                <div class="home__testimonials-image-box">
+                <img loading="lazy" class="home__testimonials-image" src="/public/images/testimonials/Kundin3.jpg" alt="Kundin" />
+                    <div class="home__testimonials-review-box">
                         <h3>Xenia</h3>
-                        <span class="home-testimonials-stars">★★★★★</span>
+                        <span class="home__testimonials-stars">★★★★★</span>
                     </div>
                 </div>
-                <div class="home-testimonials-text">
+                <div class="home__testimonials-text">
 
                     Ich fühle mich hier wirklich gut aufgehoben.
                     Die Yoga-Lehrer sind nicht nur professionell, sondern auch sehr einfühlsam.

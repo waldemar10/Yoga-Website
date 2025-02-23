@@ -1,8 +1,9 @@
-.course-schedule-headline{
+.course-schedule {
+  &__headline {
     font-size: 44px;
     color: $primaryColor;
-}
-.course-schedule-grid{
+  }
+  &__grid {
     --gap: 2em;
     --line-thickness: 2px;
     --line-offset: calc(var(--gap) / 2);
@@ -12,59 +13,58 @@
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     color: $darkColor;
     margin: 50px;
-    gap:var(--gap);
+    gap: var(--gap);
     overflow: hidden;
-}
-.course-schedule-grid > .course-schedule-box{
-    position:relative;
-}
-.course-schedule-grid > .course-schedule-box::before,
-.course-schedule-grid > .course-schedule-box::after{
+  }
+  &__grid > &__box {
+    position: relative;
+  }
+  &__grid > &__box::before,
+  &__grid > &__box::after {
     content: "";
     position: absolute;
     background-color: $darkColor;
-}
-// Rows
-.course-schedule-grid > .course-schedule-box::after{
+  }
+  // Rows
+  &__grid > &__box::after {
     top: calc(var(--line-offset) * -1);
     left: 0;
     width: 100vw;
     height: 2px;
-}
+  }
 
-// Columns
-.course-schedule-grid > .course-schedule-box::before{
+  // Columns
+  &__grid > &__box::before {
     top: 0;
     left: calc(var(--line-offset) * -1);
     width: 2px;
     height: 100vh;
-}
-.course-schedule-box{
-    h3{
-        margin: 5px;
+  }
+  &__box {
+    h3 {
+      margin: 5px;
     }
-}
-.course-schedule-time-box{
+  }
+  &__time-box {
     display: grid;
     grid-template-columns: auto 1fr auto;
     gap: 10px;
-    margin:5px;
-    
-    span:nth-child(1){
-        font-weight: bold;
+    margin: 5px;
+
+    span:nth-child(1) {
+      font-weight: bold;
     }
-    span:nth-child(2){
-        text-align: start;
+    span:nth-child(2) {
+      text-align: start;
     }
-    span:nth-child(3){
-        text-align: right;
+    span:nth-child(3) {
+      text-align: right;
     }
-}
-@media screen and (max-width: 400px){
-    .course-schedule-grid{
-        margin: 50px 10px 50px 10px;
-        font-size: small;
+  }
+  @media screen and (max-width: 400px) {
+    &__grid {
+      margin: 50px 10px 50px 10px;
+      font-size: small;
     }
- 
-    
+  }
 }

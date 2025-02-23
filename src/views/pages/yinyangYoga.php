@@ -2,10 +2,10 @@
     <h1 class="headline">
         Yin Yoga
     </h1>
-    <div class="course-sale-wrapper">
+    <div class="course-sale__wrapper">
         <img loading="lazy" src="/public/images/courses/YinYoga.jpg" />
-        <div class="course-sale-container">
-            <div class="course-sale-box">
+        <div class="course-sale__container">
+            <div class="course-sale__box">
                 <h3> Die ruhige Praxis für tiefgehende Entspannung und Flexibilität</h3>
                 <p>
                     Yin Yoga ist eine ruhige und meditative Form des Yoga, die sich
@@ -16,7 +16,7 @@
                     tiefen Bindegewebsschichten wie Faszien.
                 </p>
             </div>
-            <div class="course-sale-box">
+            <div class="course-sale__box">
                 <h3>Warum ist Yin Yoga gut?</h3>
                 Es hilft, Flexibilität und Mobilität zu verbessern, indem es das
                 Bindegewebe anregt und fördert, dass sich der Körper von innen heraus

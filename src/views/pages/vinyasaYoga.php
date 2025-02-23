@@ -2,10 +2,10 @@
     <h1 class="headline">
         Vinyasa Yoga
     </h1>
-    <div class="course-sale-wrapper">
+    <div class="course-sale__wrapper">
         <img loading="lazy" src="/public/images/courses/VinyasaYoga.jpg" />
-        <div class="course-sale-container">
-            <div class="course-sale-box">
+        <div class="course-sale__container">
+            <div class="course-sale__box">
                 <h3>Fließende Bewegungen für Körper und Geist</h3>
                 <p>
                   
@@ -23,7 +23,7 @@
                     werden kann.
                 </p>
             </div>
-            <div class="course-sale-box">
+            <div class="course-sale__box">
                 <h3>Warum Vinyasa Yoga eine bereichernde Praxis für Körper und Geist ist</h3>
                 <ol>
                     <li>
