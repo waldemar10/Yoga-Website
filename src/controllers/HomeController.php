@@ -25,11 +25,8 @@ class HomeController
                 'image' => '/public/images/teachers/Katrin.jpg',
             ],
         ];
-        /* $content = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'Views'. 
-        DIRECTORY_SEPARATOR . 'pages' . DIRECTORY_SEPARATOR . 'home.php'; */
+
         $content = __DIR__ . '/../views/pages/home.php';
-        /* include_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'Views'. 
-        DIRECTORY_SEPARATOR . 'layouts' . DIRECTORY_SEPARATOR . 'main.php'; */
         include_once __DIR__ . '/../views/layouts/main.php';
     }
 }

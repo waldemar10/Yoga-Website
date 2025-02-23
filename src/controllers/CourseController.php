@@ -3,21 +3,23 @@
 namespace App\controllers;
 
 class CourseController {
+    private $pdo;
     public function __construct($pdo) {
-        
+        $this->pdo = $pdo;
     }
     public function show($course) {
         $courses = [
-            'goodMorningYoga' => ['title' => 'Guten Morgen Yoga', 'view' => 'goodMorningYoga.php'],
-            'hathaYoga' => ['title' => 'Hatha Yoga', 'view' => 'hathaYoga.php'],
-            'vinyasaYoga' => ['title' => 'Vinyasa Yoga', 'view' => 'vinyasaYoga.php'],
+            'gutenmorgenyoga' => ['title' => 'Guten Morgen Yoga', 'view' => 'goodMorningyoga.php'],
+            'hathayoga' => ['title' => 'Hatha Yoga', 'view' => 'hathaYoga.php'],
+            'vinyasayoga' => ['title' => 'Vinyasa Yoga', 'view' => 'vinyasaYoga.php'],
             'yoganidra' => ['title' => 'Yoga Nidra', 'view' => 'yoganidra.php'],
-            'yinyangYoga' => ['title' => 'Yin Yoga', 'view' => 'yinyangYoga.php'],
-            'jivamuktiYoga' => ['title' => 'Jiva Mukti Yoga', 'view' => 'jivamuktiYoga.php'],
-            'kundaliniYoga' => ['title' => 'Kundalini Yoga', 'view' => 'kundaliniYoga.php'],
+            'yinyoga' => ['title' => 'Yin Yoga', 'view' => 'yinyangYoga.php'],
+            'jivamuktiyoga' => ['title' => 'Jiva Mukti Yoga', 'view' => 'jivamuktiYoga.php'],
+            'kundaliniyoga' => ['title' => 'Kundalini Yoga', 'view' => 'kundaliniYoga.php'],
         ];
 
         if (array_key_exists($course, $courses)) {
+          
             $title = $courses[$course]['title'];
             $content = __DIR__ . '/../views/pages/' . $courses[$course]['view'];
             include_once __DIR__ . '/../views/layouts/main.php';
@@ -26,5 +28,5 @@ class CourseController {
             echo "Seite nicht gefunden!";
         }
     }
-
+    
 }

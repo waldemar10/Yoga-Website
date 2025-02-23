@@ -27,7 +27,8 @@
     &__invoices,
     &__payment-method,
     &__courses,
-    &__checkbox{
+    &__checkbox,
+    &__payment-method-form{
         max-width: 400px;
         width: 100%;
     }
@@ -55,7 +56,15 @@
         justify-content: space-between;
         margin: 10px 0;
     }
-
+    &__payment-method-form{
+        h3{
+            text-align: center;
+        }
+    }
+    &__payment-method{
+        display:flex;
+        flex-direction: column;
+    }
     &__button{
         @include button($secondaryColor, $lightColor);
     margin-top: 10px;

@@ -29,6 +29,9 @@
     border-radius: 0px 0px 20px 20px;
     object-fit: cover;
   }
+  .course-image-filter-grey {
+    filter: grayscale(100%);
+  }
   .course-text {
     display: flex;
     flex-direction: column;

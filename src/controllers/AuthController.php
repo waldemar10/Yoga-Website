@@ -25,9 +25,10 @@ class AuthController
     }
     public function login()
     {
+        
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $email = $_POST['email'] ?? null;
-            $password = $_POST['password'] ?? null;
+            $email = htmlspecialchars($_POST['email'] ?? null);
+            $password = htmlspecialchars($_POST['password'] ?? null);
             $errors = [];
 
             if (!$email || !$password) {
@@ -43,6 +44,8 @@ class AuthController
             $user = $this->userModel->authenticate($email, $password);
 
             if ($user) {
+                require_once __DIR__ . '/../includes/config_session.inc.php';
+                $_SESSION['user_id'] = $user['id'];
                 header("Location: /profile");
                 exit();
             } else {
@@ -62,13 +65,13 @@ class AuthController
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-            $gender = $_POST['gender'] ?? '';
-            $firstName = $_POST['first_name'] ?? '';
-            $lastName = $_POST['last_name'] ?? '';
-            $email = $_POST['email'] ?? '';
-            $password = $_POST['password'] ?? '';
-            $passwordRepeat = $_POST['password_repeat'] ?? '';
-            $paymentMethod = $_POST['payment_method'] ?? '';
+            $gender = htmlspecialchars($_POST['gender'] ?? '');
+            $firstName = htmlspecialchars($_POST['first_name'] ?? '');
+            $lastName = htmlspecialchars($_POST['last_name'] ?? '');
+            $email = htmlspecialchars($_POST['email'] ?? '');
+            $password = htmlspecialchars($_POST['password'] ?? '');
+            $passwordRepeat = htmlspecialchars($_POST['password_repeat'] ?? '');
+            $paymentMethod = htmlspecialchars($_POST['payment_method'] ?? '');
             $termsAccepted = isset($_POST['terms']) ? true : false;
             $role = 'user';
 
@@ -112,8 +115,6 @@ class AuthController
                 header("Location: /auth?type=register");
                 exit();
             }
-
-            /* $userModel = new UserModel($this->pdo); */
 
             if (
                 $this->userModel->createUser(

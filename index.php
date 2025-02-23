@@ -33,6 +33,9 @@ $routes = [
     '/auth' => ['controller' => 'AuthController', 'action' => 'index'],
     '/register' => ['controller' => 'AuthController', 'action' => 'register'],
     '/profile' => ['controller' => 'ProfileController', 'action' => 'index'],
+    '/subscription' => ['controller' => 'ProfileController', 'action' => 'subscription'],
+    '/payment' => ['controller' => 'ProfileController', 'action' => 'changePaymentMethod'],
+    '/updateProfileData' => ['controller' => 'ProfileController', 'action' => 'updateProfileData'],
 ];
 
 function matchRoute($urlPath, $routes)

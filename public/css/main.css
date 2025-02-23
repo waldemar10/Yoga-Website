@@ -1286,7 +1286,7 @@ input:-webkit-autofill:active {
   text-align: center;
   padding: 20px;
 }
-.profile__invoices, .profile__payment-method, .profile__courses, .profile__checkbox {
+.profile__invoices, .profile__payment-method, .profile__courses, .profile__checkbox, .profile__payment-method-form {
   max-width: 400px;
   width: 100%;
 }
@@ -1313,6 +1313,13 @@ input:-webkit-autofill:active {
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
+}
+.profile__payment-method-form h3 {
+  text-align: center;
+}
+.profile__payment-method {
+  display: flex;
+  flex-direction: column;
 }
 .profile__button {
   padding: 10px 20px 10px 20px;
@@ -1443,6 +1450,10 @@ input:-webkit-autofill:active {
   border-radius: 0px 0px 20px 20px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.course-image-filter-grey {
+  filter: grayscale(100%);
 }
 
 .course-text {
