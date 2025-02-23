@@ -7,10 +7,10 @@
       color: $primaryColor;
       display: flex;
       flex-direction: column;
-      padding: 0px 20px;
+      padding: 20px;
       > h3{
         width: 100%;
-        margin: 20px 0px 10px 0px;
+   
       }
       p{ 
         margin: 5px 0px 5px 0px;
@@ -26,7 +26,7 @@
       }
     }
     }
-    &__dropdown-gender{
+    &__dropdown{
       max-width: 125px;
       width: 100%;
       color: $primaryColor;

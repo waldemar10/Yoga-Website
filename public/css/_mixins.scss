@@ -1,5 +1,7 @@
 @mixin button($bgColor, $textColor) {
   $bgDisabled: rgb(183, 183, 183);
+  font-size: 1rem;
+
   padding: 10px 20px 10px 20px;
   background-color: $bgColor;
   color: $textColor;
@@ -25,10 +27,13 @@
 }
 
 @mixin form($bgColor, $textColor, $borderColor) {
+  
   display: flex;
   flex-direction: column;
   input,
   textarea {
+    font-size: 1rem;
+    font-weight: 500;
     color: $textColor;
     padding: 12px 20px;
     border-radius: 20px;
@@ -41,11 +46,11 @@
     }
   }
   select {
-    height: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    /* height: 30px; */
     background-color: $bgColor;
-    font-weight: bolder;
-    padding: 5px 0px 5px 5px;
-    margin: 10px 0px 10px 0px;
+    padding: 12px 20px;
     border: 1px solid $borderColor;
     border-radius: 10px;
     cursor: pointer;

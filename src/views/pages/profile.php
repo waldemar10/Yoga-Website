@@ -24,9 +24,9 @@ endif; ?>
         </div>
 
         <div class="profile__container">
-
+        <h3>Deine Kurse</h3>
             <form class="profile__courses" method="POST" action="/subscription">
-                <h3>Abonnierte Kurse</h3>
+            <h4>Abonnierte Kurse</h4>
                 <?php
                 if (is_array($bookedCourses)) {
                     foreach ($bookedCourses as $course) {
@@ -44,8 +44,8 @@ endif; ?>
                     echo "<p class='profile__course'>Du hast noch keine Kurse abonniert.</p>";
                 }
                 ?>
-
-                <h3>Nicht abonnierte Kurse</h3>
+                <div class="profile__line"></div>
+                <h4>Nicht abonnierte Kurse</h4>
                 <?php
                 if (is_array($notBookedCourses)) {
                     foreach ($notBookedCourses as $course) {
@@ -65,7 +65,7 @@ endif; ?>
                 }
 
                 ?>
-
+                <div class="profile__line"></div>
                 <div class="notice">
                     <p>
                         Du kannst einmal im Monat deine abonnierten Kurse ändern. Der zu
@@ -84,19 +84,20 @@ endif; ?>
                     <div class="auth-form__checkbox-box">
 
                         <input type="checkbox" name="booking_confirmation" />
-                        <label>Ich melde mich verbindlich an bzw. melde ich verbindlich ab.
+                        <label>Ich melde mich verbindlich an bzw. melde mich verbindlich ab.
 
                         </label>
 
                     </div>
 
-                    <button class="button__primary" type="submit">Abonnierte Kurse ändern</button>
+                    <button class="button__primary" type="submit">Jetzt ändern</button>
                 </div>
         </div>
         </form>
         <div class="profile__container">
-            <h3>Deine Rechnungen im Überblick</h3>
+        <h3>Deine Kosten</h3>
             <div class="profile__invoices">
+            
                 <?php
                 $totalPrice = 0;
                 if (is_array($bookedCourses)) {
@@ -118,11 +119,11 @@ endif; ?>
                 ?>
             </div>
 
-
+            
             <form class="auth-form__wrapper" method="POST" action="/payment">
-                <h3>Bezahlmethode</h3>
-
-                <select name="payment" class="auth-form__dropdown-gender" required>
+            <h3>Bezahlmethode</h3>
+                <p>Du kannst jederzeit deine Bezahlmethode ändern.</p>
+                <select name="payment" class="auth-form__dropdown auth-form__dropdown" required>
                     <option value="lastschrift" <?= ($userData["payment_method"] ?? '') === "Lastschrift" ? 'selected' : '' ?>>
                         Lastschrift
                     </option>
@@ -134,7 +135,7 @@ endif; ?>
                     </option>
                 </select>
 
-                <button class="button__primary" type="submit">Bezahlmethode ändern</button>
+                <button class="button__primary" type="submit">Speichern</button>
 
             </form>
         </div>

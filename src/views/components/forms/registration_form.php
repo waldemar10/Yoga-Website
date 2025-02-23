@@ -8,7 +8,8 @@ include_once __DIR__ . '/../form_errors_view.inc.php';
         Um sich für einen Kurs anmelden zu können, benötigst du ein Konto.
         Du hast schon ein Konto? <a href="/auth?type=login">Melde dich an.</a>
     </p>
-    <select class="auth-form__dropdown-gender" name="gender" required>
+    <label>Deine Anrede</label>
+    <select class="auth-form__dropdown" name="gender" required>
         <option value="Male">Herr</option>
         <option value="Female">Frau</option>
         <option value="NotSpecified">Keine Angaben</option>
@@ -42,10 +43,9 @@ include_once __DIR__ . '/../form_errors_view.inc.php';
         <?php check_form_error('password_repeat'); ?>
         <?php check_form_error('password_wrong_repeat'); ?>
     </div>
-    <div class="auth-form__price-box">
-        <h4>Preis: monatlich 20 €</h4>
-    </div>
+    
     <div class="auth-form__radio-container">
+    <label>Zahlungsmethode</label>
         <?php check_form_error('payment_method'); ?>
         <div class="auth-form__radio-box">
             <input type="radio" name="payment_method" value="Lastschrift" />

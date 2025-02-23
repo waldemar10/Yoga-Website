@@ -1,6 +1,6 @@
 <form class="auth-form__wrapper" method="POST" action="/updateProfileData">
-    <h3>Dein Konto</h3>
-    <select name="gender" class="auth-form__dropdown-gender" required>
+    <label>Anrede</label>
+    <select name="gender" class="auth-form__dropdown" required>
         <option value="Male" <?= ($userData["gender"] ?? '') === "male" ? 'selected' : '' ?>>Herr</option>
         <option value="Female" <?= ($userData["gender"] ?? '') === "female" ? 'selected' : '' ?>>Frau</option>
         <option value="NotSpecified" <?= ($userData["gender"] ?? '') === "notSpecified" ? 'selected' : '' ?>>Keine Angaben
