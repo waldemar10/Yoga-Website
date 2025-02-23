@@ -36,6 +36,9 @@
                 <div class="header-navbar-link">
                     <a href="/aboutUs">Über uns</a>
                 </div>
+                <div class="header-navbar-link">
+                    <a href="/auth">Konto</a>
+                </div>
         </div>
 
         <button class="header-burger-menu" data-state="closed">
@@ -51,5 +54,6 @@
             <a href="/courseSchedule">Kursplan</a>
             <a href="/contact">Kontakt</a>
             <a href="/aboutUs">Über uns</a>
+            <a href="/auth">Konto</a>
     </div>
 </div>
