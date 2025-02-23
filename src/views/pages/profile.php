@@ -90,7 +90,7 @@ endif; ?>
 
                     </div>
 
-                    <button class="profile__button" type="submit">Abonnierte Kurse ändern</button>
+                    <button class="button__primary" type="submit">Abonnierte Kurse ändern</button>
                 </div>
         </div>
         </form>
@@ -134,7 +134,7 @@ endif; ?>
                     </option>
                 </select>
 
-                <button class="profile__button" type="submit">Bezahlmethode ändern</button>
+                <button class="button__primary" type="submit">Bezahlmethode ändern</button>
 
             </form>
         </div>

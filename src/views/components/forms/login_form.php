@@ -21,5 +21,5 @@ include_once __DIR__ . '/../form_errors_view.inc.php';
     <?php check_form_error('wrong'); ?>
     <?php check_form_error('empty'); ?>
     <?php unset($_SESSION['login_errors']); ?>
-    <button class="auth-form__button" type="submit">Absenden</button>
+    <button class="button__primary" type="submit">Anmelden</button>
 </form>

@@ -30,5 +30,5 @@
         <input type="password" name="password_repeat" autofill="off">
     </div>
 
-    <button class="auth-form__button" type="submit">Speichern</button>
+    <button class="button__primary" type="submit">Speichern</button>
 </form>

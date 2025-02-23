@@ -655,26 +655,6 @@ input:-webkit-autofill:active {
   text-align: center;
 }
 
-.home-hero-button {
-  margin-top: 20px;
-  padding: 10px 20px 10px 20px;
-  background-color: #716d64;
-  color: #f4f4f4;
-  border-radius: 20px;
-  transition: transform 0.3s ease;
-}
-.home-hero-button:hover {
-  transform: scale(1.1);
-}
-.home-hero-button:disabled {
-  cursor: not-allowed;
-  background-color: rgb(183, 183, 183);
-  text-decoration: line-through !important;
-}
-.home-hero-button:disabled:hover {
-  transform: none;
-}
-
 .home-yoga-quote-wrapper {
   display: flex;
   flex-direction: column;
@@ -819,26 +799,6 @@ input:-webkit-autofill:active {
 
 .home-testimonials-stars {
   font-size: 1.3rem;
-}
-
-.home-sale-button {
-  margin: 20px 0px 50px 0px;
-  padding: 10px 20px 10px 20px;
-  background-color: #dfd1c9;
-  color: #444444;
-  border-radius: 20px;
-  transition: transform 0.3s ease;
-}
-.home-sale-button:hover {
-  transform: scale(1.1);
-}
-.home-sale-button:disabled {
-  cursor: not-allowed;
-  background-color: rgb(183, 183, 183);
-  text-decoration: line-through !important;
-}
-.home-sale-button:disabled:hover {
-  transform: none;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1015,29 +975,6 @@ input:-webkit-autofill:active {
   font-weight: bolder;
 }
 
-.contact-button {
-  padding: 10px 20px 10px 20px;
-  background-color: #716d64;
-  color: #f4f4f4;
-  border-radius: 20px;
-  transition: transform 0.3s ease;
-  text-align: center;
-  margin-top: 10px;
-  max-width: 120px;
-  width: 100%;
-}
-.contact-button:hover {
-  transform: scale(1.1);
-}
-.contact-button:disabled {
-  cursor: not-allowed;
-  background-color: rgb(183, 183, 183);
-  text-decoration: line-through !important;
-}
-.contact-button:disabled:hover {
-  transform: none;
-}
-
 .contact-maps {
   max-width: 350px;
   width: 100%;
@@ -1199,28 +1136,6 @@ input:-webkit-autofill:active {
   margin-left: 10px;
 }
 
-.course-sale-button {
-  padding: 10px 20px 10px 20px;
-  background-color: #dfd1c9;
-  color: #444444;
-  border-radius: 20px;
-  transition: transform 0.3s ease;
-  margin-top: 10px;
-  max-width: 100px;
-  width: 100%;
-}
-.course-sale-button:hover {
-  transform: scale(1.1);
-}
-.course-sale-button:disabled {
-  cursor: not-allowed;
-  background-color: rgb(183, 183, 183);
-  text-decoration: line-through !important;
-}
-.course-sale-button:disabled:hover {
-  transform: none;
-}
-
 @media screen and (max-width: 768px) {
   .course-sale-wrapper {
     align-items: center;
@@ -1355,6 +1270,49 @@ input:-webkit-autofill:active {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.button__primary {
+  padding: 10px 20px 10px 20px;
+  background-color: #dfd1c9;
+  color: #444444;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  margin-top: 10px;
+  max-width: 150px;
+  width: 100%;
+}
+.button__primary:hover {
+  transform: scale(1.1);
+}
+.button__primary:disabled {
+  cursor: not-allowed;
+  background-color: rgb(183, 183, 183);
+  text-decoration: line-through !important;
+}
+.button__primary:disabled:hover {
+  transform: none;
+}
+.button__secondary {
+  padding: 10px 20px 10px 20px;
+  background-color: #716d64;
+  color: #f4f4f4;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  margin-top: 10px;
+  max-width: 150px;
+  width: 100%;
+}
+.button__secondary:hover {
+  transform: scale(1.1);
+}
+.button__secondary:disabled {
+  cursor: not-allowed;
+  background-color: rgb(183, 183, 183);
+  text-decoration: line-through !important;
+}
+.button__secondary:disabled:hover {
+  transform: none;
 }
 
 .headline {
@@ -1638,27 +1596,6 @@ input:-webkit-autofill:active {
   padding: 20px;
   color: #444444;
   text-align: center;
-}
-.auth-form__button {
-  padding: 10px 20px 10px 20px;
-  background-color: #dfd1c9;
-  color: #444444;
-  border-radius: 20px;
-  transition: transform 0.3s ease;
-  margin-top: 10px;
-  max-width: 150px;
-  width: 100%;
-}
-.auth-form__button:hover {
-  transform: scale(1.1);
-}
-.auth-form__button:disabled {
-  cursor: not-allowed;
-  background-color: rgb(183, 183, 183);
-  text-decoration: line-through !important;
-}
-.auth-form__button:disabled:hover {
-  transform: none;
 }
 
 .img {

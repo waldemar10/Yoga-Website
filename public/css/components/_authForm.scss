@@ -98,12 +98,5 @@
         text-align: center;
       }
     }
-
-    &__button{
-      @include button($primaryColor, $darkColor);
-    margin-top: 10px;
-    max-width: 150px;
-    width: 100%;
-    }
   }
     

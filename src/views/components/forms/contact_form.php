@@ -28,7 +28,7 @@ include_once __DIR__ . '/../form_errors_view.inc.php';
             </div>
         <?php endif; ?>
 
-        <button id="contact-button" class="contact-button" type="submit">
+        <button id="contact-button" class="button__secondary" type="submit">
             Abschicken
         </button>
     </form>

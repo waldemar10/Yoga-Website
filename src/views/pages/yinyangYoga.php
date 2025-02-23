@@ -30,7 +30,7 @@
                 emotionale Blockaden zu lösen und innere Ruhe zu finden. Diese Praxis ist ideal für alle, die nach einer
                 sanften, aber tiefgehenden Entspannung suchen.
             </div>
-            <?php include __DIR__ . '/../components/forms/course_form.php'; ?>
+            <button class="button__primary" onclick="location.href='/auth';">Jetzt anmelden</button>
         </div>
     </div>
 </div>

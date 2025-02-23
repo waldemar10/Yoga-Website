@@ -34,7 +34,7 @@
                 Diese Form des Yoga ist ideal, um Körper und Geist in Einklang zu bringen und eine feste
                 Grundlage für eine weiterführende Yogapraxis zu schaffen.
             </div>
-            <?php include __DIR__ . '/../components/forms/course_form.php'; ?>
+            <button class="button__primary" onclick="location.href='/auth';">Jetzt anmelden</button>
         </div>
     </div>
 </div>

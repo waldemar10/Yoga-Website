@@ -31,7 +31,7 @@
                 Sie ist eine perfekte Ergänzung zu jeder anderen Yoga-Praxis oder auch für sich allein,
                 um den Tag mit Ruhe und Ausgeglichenheit zu beenden.
             </div>
-            <?php include __DIR__ . '/../components/forms/course_form.php'; ?>
+            <button class="button__primary" onclick="location.href='/auth';">Jetzt anmelden</button>
         </div>
     </div>
 </div>

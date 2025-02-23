@@ -68,5 +68,5 @@ include_once __DIR__ . '/../form_errors_view.inc.php';
     </div>
     <?php check_form_error('agb'); ?>
     <?php unset($_SESSION['register_errors']); ?>
-    <button class="auth-form__button" type="submit">Absenden</button>
+    <button class="button__primary" type="submit">Registrieren</button>
 </form>

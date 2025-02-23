@@ -34,11 +34,6 @@
   text-align: center;
 }
 
-.home-hero-button {
-  margin-top: 20px;
-  @include button($secondaryColor, $lightColor);
-}
-
 .home-yoga-quote-wrapper {
   display: flex;
   flex-direction: column;
@@ -172,10 +167,6 @@
 }
 .home-testimonials-stars {
   font-size: 1.3rem;
-}
-.home-sale-button {
-  margin: 20px 0px 50px 0px;
-  @include button($primaryColor, $darkColor);
 }
 
 @media screen and (max-width: 1000px) {

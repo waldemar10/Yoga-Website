@@ -5,7 +5,7 @@
         <div class="home-hero-box">
             <h1>Finde deine innere Balance.</h1>
 
-            <button type="button" class="home-hero-button" onclick="location.href='/category';">
+            <button type="button" class="button__secondary" onclick="location.href='/category';">
                 Jetzt Starten
             </button>
 
@@ -218,7 +218,7 @@
             </div>
         </div>
 
-        <button type="button" class="home-sale-button" onclick="location.href='/category';">
+        <button type="button" class="button__primary" onclick="location.href='/category';">
             Jetzt Starten
         </button>
 

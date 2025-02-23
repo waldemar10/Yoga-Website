@@ -70,12 +70,6 @@
     margin-left: 10px;
   }
 }
-.course-sale-button {
-  @include button($primaryColor, $darkColor);
-  margin-top: 10px;
-  max-width: 100px;
-  width: 100%;
-}
 
 @media  screen and (max-width: 768px) {
     .course-sale-wrapper {
