@@ -139,6 +139,7 @@ class ProfileController
                 die("Benutzer nicht eingeloggt.");
             }
             $this->userModel->deleteUser($userId);
+            session_destroy();
             header("Location: /auth?type=login");
             exit();
         }
