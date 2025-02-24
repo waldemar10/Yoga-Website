@@ -10,9 +10,13 @@ export function startApp() {
   initializeBurgerMenu();
   const urlParams = new URLSearchParams(window.location.search);
   const success = urlParams.get('success');
+  const modal = urlParams.get('modal');
   const type = urlParams.get('type');
 
   if (success === 'true' && type) {
+    initializeModal(type);
+  }
+  if(modal === 'true' && type) {
     initializeModal(type);
   }
 }

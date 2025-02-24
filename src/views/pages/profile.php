@@ -5,6 +5,11 @@ include_once __DIR__ . '/../components/form_errors_view.inc.php';
 <?php if (isset($_GET['success']) && $_GET['success'] === 'true'):
     include_once __DIR__ . '/../components/success_modal.php';
 endif; ?>
+
+<?php if (isset($_GET['modal']) && $_GET['modal'] === 'true'):
+    include_once __DIR__ . '/../components/confirm_modal.php';
+endif; ?>
+
 <div class="layout">
     <h1 class="headline">
         Hallo <?= htmlspecialchars($userData['first_name'] ?? 'User') ?>!
@@ -24,9 +29,9 @@ endif; ?>
         </div>
 
         <div class="profile__container">
-        <h3>Deine Kurse</h3>
+            <h3>Deine Kurse</h3>
             <form class="profile__courses" method="POST" action="/subscription">
-            <h4>Abonnierte Kurse</h4>
+                <h4>Abonnierte Kurse</h4>
                 <?php
                 if (is_array($bookedCourses)) {
                     foreach ($bookedCourses as $course) {
@@ -95,9 +100,9 @@ endif; ?>
         </div>
         </form>
         <div class="profile__container">
-        <h3>Deine Kosten</h3>
+            <h3>Deine Kosten</h3>
             <div class="profile__invoices">
-            
+
                 <?php
                 $totalPrice = 0;
                 if (is_array($bookedCourses)) {
@@ -119,11 +124,11 @@ endif; ?>
                 ?>
             </div>
 
-            
-            <form class="auth-form__wrapper" method="POST" action="/payment">
             <h3>Bezahlmethode</h3>
+            <form class="auth-form__wrapper" style="padding-top:0px" method="POST" action="/payment">
+                
                 <p>Du kannst jederzeit deine Bezahlmethode ändern.</p>
-                <select name="payment" class="auth-form__dropdown auth-form__dropdown" required>
+                <select name="payment" class="auth-form__dropdown auth-form__dropdown" style="margin-top:10px" required>
                     <option value="lastschrift" <?= ($userData["payment_method"] ?? '') === "Lastschrift" ? 'selected' : '' ?>>
                         Lastschrift
                     </option>
@@ -139,7 +144,19 @@ endif; ?>
 
             </form>
         </div>
+        <div class="profile__container">
+            <h3>Konto löschen</h3>
+            <p>Wenn du dein Konto löschen möchtest, klicke auf den Button.</p>
+            <form class="auth-form__wrapper" method="POST" action="/profile?type=delete&modal=true">
+                <button class="button__delete">Konto löschen</button>
+            </form>
+            
+        </div>
     </div>
 </div>
+
+<form class="form__delete-profile" method="POST" action="/deleteProfile" style="display: none;">
+    <input type="hidden" name="confirm" value="yes">
+</form>
 
 <?php unset($_SESSION['booking_errors']); ?>

@@ -130,4 +130,17 @@ class ProfileController
 
         }
     }
+    public function deleteProfile()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            require_once __DIR__ . '/../includes/config_session.inc.php';
+            $userId = $_SESSION['user_id'] ?? null;
+            if (!$userId) {
+                die("Benutzer nicht eingeloggt.");
+            }
+            $this->userModel->deleteUser($userId);
+            header("Location: /auth?type=login");
+            exit();
+        }
+    }
 }

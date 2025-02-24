@@ -1,4 +1,4 @@
-.success-modal{
+.modal{
     position: fixed;
     top:50%;
     left:50%;
@@ -14,12 +14,12 @@
         z-index: 1;
         filter: brightness(0.5);
     }
-
     &__content{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-align: center;
         margin:20px;
         padding: 20px;
         background-color: $primaryColor;
@@ -30,5 +30,12 @@
         max-width: 500px;
         width: 100%;
         height: 200px;
+    }
+    &__actions{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 10px;
+       
     }
 }

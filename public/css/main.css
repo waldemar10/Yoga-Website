@@ -1270,6 +1270,72 @@ input:-webkit-autofill:active {
 .button__secondary:disabled:hover {
   transform: none;
 }
+.button__delete {
+  font-size: 1rem;
+  padding: 10px 20px 10px 20px;
+  background-color: #d9534f;
+  color: #f4f4f4;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  margin-top: 20px;
+  max-width: 150px;
+  width: 100%;
+}
+.button__delete:hover {
+  transform: scale(1.1);
+}
+.button__delete:disabled {
+  cursor: not-allowed;
+  background-color: rgb(183, 183, 183);
+  text-decoration: line-through !important;
+}
+.button__delete:disabled:hover {
+  transform: none;
+}
+.button__confirm {
+  font-size: 1rem;
+  padding: 10px 20px 10px 20px;
+  background-color: #5cb85c;
+  color: #f4f4f4;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  margin-top: 20px;
+  max-width: 150px;
+  width: 100%;
+}
+.button__confirm:hover {
+  transform: scale(1.1);
+}
+.button__confirm:disabled {
+  cursor: not-allowed;
+  background-color: rgb(183, 183, 183);
+  text-decoration: line-through !important;
+}
+.button__confirm:disabled:hover {
+  transform: none;
+}
+.button__cancel {
+  font-size: 1rem;
+  padding: 10px 20px 10px 20px;
+  background-color: #d9534f;
+  color: #f4f4f4;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  margin-top: 20px;
+  max-width: 150px;
+  width: 100%;
+}
+.button__cancel:hover {
+  transform: scale(1.1);
+}
+.button__cancel:disabled {
+  cursor: not-allowed;
+  background-color: rgb(183, 183, 183);
+  text-decoration: line-through !important;
+}
+.button__cancel:disabled:hover {
+  transform: none;
+}
 
 .headline {
   font-size: 48px;
@@ -1411,6 +1477,47 @@ input:-webkit-autofill:active {
   max-width: 500px;
   width: 100%;
   height: 200px;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.modal__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  filter: brightness(0.5);
+}
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #dfd1c9;
+  color: #444444;
+  border: 2px solid #716d64;
+  border-radius: 25px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  width: 100%;
+  height: 200px;
+}
+.modal__actions {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 10px;
 }
 
 .auth-form__wrapper {

@@ -63,6 +63,16 @@ class UserModel
             return false;
         }
     }
+    public function deleteUser($userId)
+    {
+        try {
+            $stmt = $this->db->prepare("DELETE FROM users WHERE id = :id");
+            $stmt->execute([':id' => $userId]);
+            return true;
+        } catch (PDOException $e) {
+            return false;
+        }
+    }
     public function updatePaymentMethod($userId, $paymentMethod)
     {
         try {
