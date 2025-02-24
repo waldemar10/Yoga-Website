@@ -40,4 +40,5 @@
         <a href="#impressum">Impressum</a>
         <a href="#datenschutz">Datenschutz</a>
     </div>
+    <p class="footer__info">Es handelt sich um ein fiktives Unternehmen.</p>
 </div>

@@ -97,6 +97,13 @@
   width: 100%;
   margin: 10px;
 }
+&__info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 10px;
+}
 &__legal-links {
   display: flex;
   align-items: center;
@@ -160,6 +167,11 @@
     font-size: small;
   }
   &__legal-info{
+    margin: 0px;
+    justify-content: center;
+    width: auto;
+  }
+  &__info{
     margin: 0px;
     justify-content: center;
     width: auto;
