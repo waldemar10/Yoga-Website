@@ -2,8 +2,8 @@
 
 namespace App\Controllers;
 
-use App\Models\UserModel;
-use App\Models\BookingModel;
+use App\models\UserModel;
+use App\models\BookingModel;
 class ProfileController
 {
     private $pdo;

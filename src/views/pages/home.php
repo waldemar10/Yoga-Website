@@ -139,7 +139,7 @@
     <div class="home__sale-box">
         <h2>Heißbegehrte Kurse</h2>
         <div class="course__container">
-            <a href="/course/hathaYoga">
+            <a href="/course/hathayoga">
                 <div class="course__box">
                     <div class="course__text">
                         <h3>Hatha Yoga</h3>
@@ -147,7 +147,7 @@
                     <img loading="lazy" class="course__image" src="/public/images/courses/HathaYoga.jpg" alt="hatha yoga" />
                 </div>
             </a>
-            <a href="/course/vinyasaYoga">
+            <a href="/course/vinyasayoga">
                 <div class="course__box">
                     <div class="course__text">
                         <h3>Vinyasa Yoga</h3>

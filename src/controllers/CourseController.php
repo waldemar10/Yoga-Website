@@ -9,7 +9,7 @@ class CourseController {
     }
     public function show($course) {
         $courses = [
-            'gutenmorgenyoga' => ['title' => 'Guten Morgen Yoga', 'view' => 'goodMorningyoga.php'],
+            'gutenmorgenyoga' => ['title' => 'Guten Morgen Yoga', 'view' => 'goodMorningYoga.php'],
             'hathayoga' => ['title' => 'Hatha Yoga', 'view' => 'hathaYoga.php'],
             'vinyasayoga' => ['title' => 'Vinyasa Yoga', 'view' => 'vinyasaYoga.php'],
             'yoganidra' => ['title' => 'Yoga Nidra', 'view' => 'yoganidra.php'],
